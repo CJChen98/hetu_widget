@@ -1,4 +1,4 @@
-# flutter_webview
+# hetu_widget
 
 A new Flutter project.
 
