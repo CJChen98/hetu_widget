@@ -1,0 +1,39 @@
+//import 'flutter/widgets.ht'
+//import 'flutter/painting.ht'
+//import 'flutter/material/progress_indicator.ht'
+//import 'dart/ui.ht'
+//import 'flutter/rendering.ht'
+//import 'user/common_title.ht'
+//import 'packages/cached_network_image.ht'
+
+fun build(text1,text2,url){
+    Column(
+      children: [
+        Expanded(
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(text1,maxLines: 2,overflow: TextOverflow.fade),
+                Container(
+                    padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 5.0),
+                    margin: EdgeInsets.all(20.0),
+                    color: Color(0xFFFF0000),
+                    child: Text(text2,maxLines: 3,overflow: TextOverflow.ellipsis)
+                ),
+                CachedNetworkImage(
+                  width: 300.0,
+                  fit: BoxFit.fitHeight,
+                  imageUrl: url,
+                  placeholder: _placeHolder,
+                  errorWidget: _errorWidget,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    )
+}
+fun [PlaceholderWidgetBuilder] _placeHolder => Center(child:CircularProgressIndicator())
+fun [LoadingErrorWidgetBuilder] _errorWidget => Center(child:Text("Icons.error"))
