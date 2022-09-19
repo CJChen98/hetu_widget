@@ -42,43 +42,6 @@ class BorderStyleAutoBinding extends HTExternalClass {
     }
   }
 }
-class StrokeAlignAutoBinding extends HTExternalClass {
-  StrokeAlignAutoBinding() : super(r'StrokeAlign');
-
-  @override
-  dynamic memberGet(String varName, {String? from}) {
-    switch (varName) {
-      case r'values':
-        return StrokeAlign.values;
-      case r'StrokeAlign.inside':
-        return StrokeAlign.inside;
-      case r'StrokeAlign.center':
-        return StrokeAlign.center;
-      case r'StrokeAlign.outside':
-        return StrokeAlign.outside;
-      default:
-        throw HTError.undefined(varName);
-    }
-  }
-
-
-  @override
-  dynamic instanceMemberGet(dynamic object, String varName) {
-    switch (varName) {
-      case r'typeid':
-        return const HTExternalType(r'StrokeAlign');
-      case r'index':
-        return (object as StrokeAlign).index;
-      case r'toString':
-        return (HTEntity entity,
-            {List<dynamic> positionalArgs = const [],
-              Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => (object as StrokeAlign).toString();
-      default:
-        throw HTError.undefined(varName);
-    }
-  }
-}
 
 class BorderSideAutoBinding extends HTExternalClass {
   BorderSideAutoBinding() : super(r'BorderSide');
@@ -90,7 +53,7 @@ class BorderSideAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => BorderSide(color : namedArgs.containsKey('color') ? namedArgs['color'] : const Color(0xFF000000), width : namedArgs.containsKey('width') ? namedArgs['width'] : 1.0, style : namedArgs.containsKey('style') ? namedArgs['style'] : BorderStyle.solid, strokeAlign : namedArgs.containsKey('strokeAlign') ? namedArgs['strokeAlign'] : StrokeAlign.inside);
+              List<HTType> typeArgs = const []}) => BorderSide(color : namedArgs.containsKey('color') ? namedArgs['color'] : const Color(0xFF000000), width : namedArgs.containsKey('width') ? namedArgs['width'] : 1.0, style : namedArgs.containsKey('style') ? namedArgs['style'] : BorderStyle.solid, strokeAlign : namedArgs.containsKey('strokeAlign') ? namedArgs['strokeAlign'] :BorderSide.strokeAlignInside);
       case r'BorderSide.merge':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

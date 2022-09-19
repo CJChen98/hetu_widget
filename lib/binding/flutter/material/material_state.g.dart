@@ -4,6 +4,7 @@ import 'package:hetu_script/types.dart';
 import 'package:hetu_script/values.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
+
 class MaterialStateAutoBinding extends HTExternalClass {
   MaterialStateAutoBinding() : super(r'MaterialState');
 

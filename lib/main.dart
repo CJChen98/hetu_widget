@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Material(
       child: initialized
-          ? _buildScript()
+          ? _buildText()
           : const Center(child: CircularProgressIndicator()),
       // child: _buildText(),
     );

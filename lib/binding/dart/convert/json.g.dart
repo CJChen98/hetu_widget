@@ -239,8 +239,6 @@ class JsonUtf8EncoderAutoBinding extends HTExternalClass {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => JsonUtf8Encoder(positionalArgs.length > 0 ? positionalArgs[0] : null, positionalArgs.length > 1 ? positionalArgs[1] : null, positionalArgs.length > 2 ? positionalArgs[2] : null);
-      case r'JsonUtf8Encoder.DEFAULT_BUFFER_SIZE':
-        return JsonUtf8Encoder.DEFAULT_BUFFER_SIZE;
       default:
         throw HTError.undefined(varName);
     }

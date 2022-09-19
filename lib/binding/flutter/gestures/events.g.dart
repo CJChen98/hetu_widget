@@ -1189,7 +1189,7 @@ class PointerPanZoomStartEventAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => PointerPanZoomStartEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.mouse, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false);
+              List<HTType> typeArgs = const []}) => PointerPanZoomStartEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false);
       default:
         throw HTError.undefined(varName);
     }
@@ -1294,7 +1294,7 @@ class PointerPanZoomUpdateEventAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => PointerPanZoomUpdateEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.mouse, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0, pan : namedArgs.containsKey('pan') ? namedArgs['pan'] : Offset.zero, panDelta : namedArgs.containsKey('panDelta') ? namedArgs['panDelta'] : Offset.zero, scale : namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0, rotation : namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false);
+              List<HTType> typeArgs = const []}) => PointerPanZoomUpdateEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0, pan : namedArgs.containsKey('pan') ? namedArgs['pan'] : Offset.zero, panDelta : namedArgs.containsKey('panDelta') ? namedArgs['panDelta'] : Offset.zero, scale : namedArgs.containsKey('scale') ? namedArgs['scale'] : 1.0, rotation : namedArgs.containsKey('rotation') ? namedArgs['rotation'] : 0.0, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false);
       default:
         throw HTError.undefined(varName);
     }
@@ -1411,7 +1411,7 @@ class PointerPanZoomEndEventAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => PointerPanZoomEndEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.mouse, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false);
+              List<HTType> typeArgs = const []}) => PointerPanZoomEndEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, pointer : namedArgs.containsKey('pointer') ? namedArgs['pointer'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0, synthesized : namedArgs.containsKey('synthesized') ? namedArgs['synthesized'] : false);
       default:
         throw HTError.undefined(varName);
     }

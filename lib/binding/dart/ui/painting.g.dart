@@ -1456,18 +1456,6 @@ extension ImageShaderBinding on ImageShader {
 class FragmentProgramAutoBinding extends HTExternalClass {
   FragmentProgramAutoBinding() : super(r'FragmentProgram');
 
-  @override
-  dynamic memberGet(String varName, {String? from}) {
-    switch (varName) {
-      case r'FragmentProgram.compile':
-        return (HTEntity entity,
-            {List<dynamic> positionalArgs = const [],
-              Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => FragmentProgram.compile(spirv : namedArgs['spirv'], debugPrint : namedArgs.containsKey('debugPrint') ? namedArgs['debugPrint'] : false);
-      default:
-        throw HTError.undefined(varName);
-    }
-  }
 
   @override
   dynamic instanceMemberGet(dynamic object, String varName) {

@@ -64,7 +64,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - scripts/user/
     - scripts/packages/
     - scripts/flutter/
     - scripts/dart/

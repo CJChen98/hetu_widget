@@ -1,10 +1,7 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:hetu_script/binding.dart';
 import 'package:hetu_script/types.dart';
-import 'package:hetu_script/values.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
 
 
 class PlatformAdaptiveIconsAutoBinding extends HTExternalClass {
@@ -17116,14 +17113,6 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.west_rounded;
       case r'Icons.west_outlined':
         return Icons.west_outlined;
-      case r'Icons.whatsapp':
-        return Icons.whatsapp;
-      case r'Icons.whatsapp_sharp':
-        return Icons.whatsapp_sharp;
-      case r'Icons.whatsapp_rounded':
-        return Icons.whatsapp_rounded;
-      case r'Icons.whatsapp_outlined':
-        return Icons.whatsapp_outlined;
       case r'Icons.whatshot':
         return Icons.whatshot;
       case r'Icons.whatshot_sharp':

@@ -800,7 +800,6 @@ class HetuLibraryScriptBinding {
     functionWrappers.addAll(SliverChildBuilderDelegateAutoBinding.functionWrapper());
     functionWrappers.addAll(SliverChildListDelegateAutoBinding.functionWrapper());
     functionWrappers.addAll(SliverMultiBoxAdaptorElementAutoBinding.functionWrapper());
-    functionWrappers.addAll(MenuItemAutoBinding.functionWrapper());
     functionWrappers.addAll(PlatformMenuAutoBinding.functionWrapper());
     functionWrappers.addAll(PlatformMenuItemGroupAutoBinding.functionWrapper());
     functionWrappers.addAll(PlatformMenuItemAutoBinding.functionWrapper());
@@ -1126,7 +1125,6 @@ class HetuLibraryScriptBinding {
       ShapeBorderAutoBinding(),
       OutlinedBorderAutoBinding(),
       BorderStyleAutoBinding(),
-      StrokeAlignAutoBinding(),
       BoxBorderAutoBinding(),
       BorderAutoBinding(),
       BorderDirectionalAutoBinding(),
@@ -1816,7 +1814,6 @@ class HetuLibraryScriptBinding {
       ChipThemeAutoBinding(),
       ChipThemeDataAutoBinding(),
       InkSparkleAutoBinding(),
-      FragmentShaderManagerAutoBinding(),
       MergeableMaterialItemAutoBinding(),
       MaterialSliceAutoBinding(),
       MaterialGapAutoBinding(),
@@ -2030,8 +2027,6 @@ class HetuLibraryScriptBinding {
       RouteInformationReportingTypeAutoBinding(),
       LocalHistoryEntryAutoBinding(),
       RouteAwareAutoBinding(),
-      FocusTrapAutoBinding(),
-      FocusTrapAreaAutoBinding(),
       DirectionalityAutoBinding(),
       OpacityAutoBinding(),
       ShaderMaskAutoBinding(),
@@ -2383,7 +2378,6 @@ class HetuLibraryScriptBinding {
       SliverOffstageAutoBinding(),
       KeepAliveAutoBinding(),
       ShortcutSerializationAutoBinding(),
-      MenuItemAutoBinding(),
       PlatformMenuDelegateAutoBinding(),
       DefaultPlatformMenuDelegateAutoBinding(),
       PlatformMenuBarAutoBinding(),

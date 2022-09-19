@@ -1,7 +1,11 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:hetu_script/binding.dart';
 import 'package:hetu_script/types.dart';
+import 'package:hetu_script/values.dart';
 import 'package:flutter/painting.dart';
+import 'dart:math'as math;
+import 'dart:ui'as ui;
+import 'package:flutter/foundation.dart';
 
 const _kColorDefault =0xFF000000;
 class BoxShadowAutoBinding extends HTExternalClass {
