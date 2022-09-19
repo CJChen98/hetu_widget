@@ -17,7 +17,7 @@ class SemanticsServiceAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => SemanticsService.announce(positionalArgs[0], positionalArgs[1]);
+              List<HTType> typeArgs = const []}) => SemanticsService.announce(positionalArgs[0], positionalArgs[1], assertiveness : namedArgs.containsKey('assertiveness') ? namedArgs['assertiveness'] : Assertiveness.polite);
       case r'SemanticsService.tooltip':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

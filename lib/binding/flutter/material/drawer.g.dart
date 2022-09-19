@@ -52,7 +52,7 @@ class DrawerAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => Drawer(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, width : namedArgs.containsKey('width') ? namedArgs['width'] : null, child : namedArgs.containsKey('child') ? namedArgs['child'] : null, semanticLabel : namedArgs.containsKey('semanticLabel') ? namedArgs['semanticLabel'] : null);
+              List<HTType> typeArgs = const []}) => Drawer(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, width : namedArgs.containsKey('width') ? namedArgs['width'] : null, child : namedArgs.containsKey('child') ? namedArgs['child'] : null, semanticLabel : namedArgs.containsKey('semanticLabel') ? namedArgs['semanticLabel'] : null);
       default:
         throw HTError.undefined(varName);
     }
@@ -76,6 +76,10 @@ extension DrawerBinding on Drawer {
         return backgroundColor;
       case r'elevation':
         return elevation;
+      case r'shadowColor':
+        return shadowColor;
+      case r'surfaceTintColor':
+        return surfaceTintColor;
       case r'shape':
         return shape;
       case r'width':

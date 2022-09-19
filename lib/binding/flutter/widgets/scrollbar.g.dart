@@ -136,21 +136,21 @@ extension ScrollbarPainterBinding on ScrollbarPainter {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.updateThickness(positionalArgs[0], positionalArgs[1]);
-      case r'dispose':
-        return (HTEntity entity,
-            {List<dynamic> positionalArgs = const [],
-              Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.dispose();
-      case r'getTrackToScroll':
-        return (HTEntity entity,
-            {List<dynamic> positionalArgs = const [],
-              Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.getTrackToScroll(positionalArgs[0]);
       case r'paint':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.paint(positionalArgs[0], positionalArgs[1]);
+      case r'getTrackToScroll':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.getTrackToScroll(positionalArgs[0]);
+      case r'hitTest':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.hitTest(positionalArgs[0]);
       case r'hitTestInteractive':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -161,11 +161,6 @@ extension ScrollbarPainterBinding on ScrollbarPainter {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.hitTestOnlyThumbInteractive(positionalArgs[0], positionalArgs[1]);
-      case r'hitTest':
-        return (HTEntity entity,
-            {List<dynamic> positionalArgs = const [],
-              Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.hitTest(positionalArgs[0]);
       case r'shouldRepaint':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -181,6 +176,11 @@ extension ScrollbarPainterBinding on ScrollbarPainter {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.toString();
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
       case r'addListener':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -259,7 +259,7 @@ class RawScrollbarAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => RawScrollbar(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, child : namedArgs['child'], controller : namedArgs.containsKey('controller') ? namedArgs['controller'] : null, thumbVisibility : namedArgs.containsKey('thumbVisibility') ? namedArgs['thumbVisibility'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, radius : namedArgs.containsKey('radius') ? namedArgs['radius'] : null, thickness : namedArgs.containsKey('thickness') ? namedArgs['thickness'] : null, thumbColor : namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null, minThumbLength : namedArgs.containsKey('minThumbLength') ? namedArgs['minThumbLength'] : _kMinThumbExtent, minOverscrollLength : namedArgs.containsKey('minOverscrollLength') ? namedArgs['minOverscrollLength'] : null, trackVisibility : namedArgs.containsKey('trackVisibility') ? namedArgs['trackVisibility'] : null, trackRadius : namedArgs.containsKey('trackRadius') ? namedArgs['trackRadius'] : null, trackColor : namedArgs.containsKey('trackColor') ? namedArgs['trackColor'] : null, trackBorderColor : namedArgs.containsKey('trackBorderColor') ? namedArgs['trackBorderColor'] : null, fadeDuration : namedArgs.containsKey('fadeDuration') ? namedArgs['fadeDuration'] : _kScrollbarFadeDuration, timeToFade : namedArgs.containsKey('timeToFade') ? namedArgs['timeToFade'] : _kScrollbarTimeToFade, pressDuration : namedArgs.containsKey('pressDuration') ? namedArgs['pressDuration'] : Duration.zero, notificationPredicate : namedArgs.containsKey('notificationPredicate') ? namedArgs['notificationPredicate'] : defaultScrollNotificationPredicate, interactive : namedArgs.containsKey('interactive') ? namedArgs['interactive'] : null, scrollbarOrientation : namedArgs.containsKey('scrollbarOrientation') ? namedArgs['scrollbarOrientation'] : null, mainAxisMargin : namedArgs.containsKey('mainAxisMargin') ? namedArgs['mainAxisMargin'] : 0.0, crossAxisMargin : namedArgs.containsKey('crossAxisMargin') ? namedArgs['crossAxisMargin'] : 0.0, isAlwaysShown : namedArgs.containsKey('isAlwaysShown') ? namedArgs['isAlwaysShown'] : null);
+              List<HTType> typeArgs = const []}) => RawScrollbar(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, child : namedArgs['child'], controller : namedArgs.containsKey('controller') ? namedArgs['controller'] : null, thumbVisibility : namedArgs.containsKey('thumbVisibility') ? namedArgs['thumbVisibility'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, radius : namedArgs.containsKey('radius') ? namedArgs['radius'] : null, thickness : namedArgs.containsKey('thickness') ? namedArgs['thickness'] : null, thumbColor : namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null, minThumbLength : namedArgs.containsKey('minThumbLength') ? namedArgs['minThumbLength'] : _kMinThumbExtent, minOverscrollLength : namedArgs.containsKey('minOverscrollLength') ? namedArgs['minOverscrollLength'] : null, trackVisibility : namedArgs.containsKey('trackVisibility') ? namedArgs['trackVisibility'] : null, trackRadius : namedArgs.containsKey('trackRadius') ? namedArgs['trackRadius'] : null, trackColor : namedArgs.containsKey('trackColor') ? namedArgs['trackColor'] : null, trackBorderColor : namedArgs.containsKey('trackBorderColor') ? namedArgs['trackBorderColor'] : null, fadeDuration : namedArgs.containsKey('fadeDuration') ? namedArgs['fadeDuration'] : _kScrollbarFadeDuration, timeToFade : namedArgs.containsKey('timeToFade') ? namedArgs['timeToFade'] : _kScrollbarTimeToFade, pressDuration : namedArgs.containsKey('pressDuration') ? namedArgs['pressDuration'] : Duration.zero, notificationPredicate : namedArgs.containsKey('notificationPredicate') ? namedArgs['notificationPredicate'] : defaultScrollNotificationPredicate, interactive : namedArgs.containsKey('interactive') ? namedArgs['interactive'] : null, scrollbarOrientation : namedArgs.containsKey('scrollbarOrientation') ? namedArgs['scrollbarOrientation'] : null, mainAxisMargin : namedArgs.containsKey('mainAxisMargin') ? namedArgs['mainAxisMargin'] : 0.0, crossAxisMargin : namedArgs.containsKey('crossAxisMargin') ? namedArgs['crossAxisMargin'] : 0.0, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, isAlwaysShown : namedArgs.containsKey('isAlwaysShown') ? namedArgs['isAlwaysShown'] : null);
       default:
         throw HTError.undefined(varName);
     }
@@ -326,6 +326,8 @@ extension RawScrollbarBinding on RawScrollbar {
         return mainAxisMargin;
       case r'crossAxisMargin':
         return crossAxisMargin;
+      case r'padding':
+        return padding;
       case r'createState':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

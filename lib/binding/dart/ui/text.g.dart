@@ -7,6 +7,7 @@ import 'dart:async';
 import 'dart:collection'as collection;
 import 'dart:convert';
 import 'dart:developer'as developer;
+import 'dart:ffi';
 import 'dart:io';
 import 'dart:isolate';
 import 'dart:math'as math;
@@ -450,6 +451,8 @@ extension FontWeightBinding on FontWeight {
         return const HTExternalType(r'FontWeight');
       case r'index':
         return index;
+      case r'value':
+        return value;
       case r'toString':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -1173,6 +1176,8 @@ extension ParagraphBinding on Paragraph {
         return ideographicBaseline;
       case r'didExceedMaxLines':
         return didExceedMaxLines;
+      case r'debugDisposed':
+        return debugDisposed;
       case r'layout':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -1208,6 +1213,11 @@ extension ParagraphBinding on Paragraph {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.computeLineMetrics();
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
       default:
         throw HTError.undefined(varName);
     }

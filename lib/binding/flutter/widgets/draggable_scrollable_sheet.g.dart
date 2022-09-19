@@ -106,7 +106,7 @@ class DraggableScrollableSheetAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => DraggableScrollableSheet(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, initialChildSize : namedArgs.containsKey('initialChildSize') ? namedArgs['initialChildSize'] : 0.5, minChildSize : namedArgs.containsKey('minChildSize') ? namedArgs['minChildSize'] : 0.25, maxChildSize : namedArgs.containsKey('maxChildSize') ? namedArgs['maxChildSize'] : 1.0, expand : namedArgs.containsKey('expand') ? namedArgs['expand'] : true, snap : namedArgs.containsKey('snap') ? namedArgs['snap'] : false, snapSizes : namedArgs.containsKey('snapSizes') ? List<double>.from(namedArgs['snapSizes']) : null, controller : namedArgs.containsKey('controller') ? namedArgs['controller'] : null, builder : namedArgs['builder']);
+              List<HTType> typeArgs = const []}) => DraggableScrollableSheet(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, initialChildSize : namedArgs.containsKey('initialChildSize') ? namedArgs['initialChildSize'] : 0.5, minChildSize : namedArgs.containsKey('minChildSize') ? namedArgs['minChildSize'] : 0.25, maxChildSize : namedArgs.containsKey('maxChildSize') ? namedArgs['maxChildSize'] : 1.0, expand : namedArgs.containsKey('expand') ? namedArgs['expand'] : true, snap : namedArgs.containsKey('snap') ? namedArgs['snap'] : false, snapSizes : namedArgs.containsKey('snapSizes') ? List<double>.from(namedArgs['snapSizes']) : null, snapAnimationDuration : namedArgs.containsKey('snapAnimationDuration') ? namedArgs['snapAnimationDuration'] : null, controller : namedArgs.containsKey('controller') ? namedArgs['controller'] : null, builder : namedArgs['builder']);
       default:
         throw HTError.undefined(varName);
     }
@@ -143,6 +143,8 @@ extension DraggableScrollableSheetBinding on DraggableScrollableSheet {
         return snap;
       case r'snapSizes':
         return snapSizes;
+      case r'snapAnimationDuration':
+        return snapAnimationDuration;
       case r'controller':
         return controller;
       case r'builder':

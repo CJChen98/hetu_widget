@@ -112,12 +112,12 @@ extension FileBinding on File {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.create(recursive : namedArgs.containsKey('recursive') ? namedArgs['recursive'] : false);
+              List<HTType> typeArgs = const []}) => this.create(recursive : namedArgs.containsKey('recursive') ? namedArgs['recursive'] : false, exclusive : namedArgs.containsKey('exclusive') ? namedArgs['exclusive'] : false);
       case r'createSync':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.createSync(recursive : namedArgs.containsKey('recursive') ? namedArgs['recursive'] : false);
+              List<HTType> typeArgs = const []}) => this.createSync(recursive : namedArgs.containsKey('recursive') ? namedArgs['recursive'] : false, exclusive : namedArgs.containsKey('exclusive') ? namedArgs['exclusive'] : false);
       case r'rename':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -478,6 +478,52 @@ extension FileSystemExceptionBinding on FileSystemException {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.toString();
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+
+}
+
+class PipeAutoBinding extends HTExternalClass {
+  PipeAutoBinding() : super(r'Pipe');
+
+  @override
+  dynamic memberGet(String varName, {String? from}) {
+    switch (varName) {
+      case r'Pipe.createSync':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => Pipe.createSync();
+      case r'Pipe.create':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => Pipe.create();
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+
+  @override
+  dynamic instanceMemberGet(dynamic object, String varName) {
+    return (object as Pipe).htFetch(varName);
+  }
+
+
+
+}
+
+extension PipeBinding on Pipe {
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case r'typeid':
+        return const HTExternalType(r'Pipe');
+      case r'read':
+        return read;
+      case r'write':
+        return write;
       default:
         throw HTError.undefined(varName);
     }

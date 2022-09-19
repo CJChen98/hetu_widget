@@ -123,6 +123,11 @@ class OverlayAutoBinding extends HTExternalClass {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => Overlay.of(positionalArgs[0], rootOverlay : namedArgs.containsKey('rootOverlay') ? namedArgs['rootOverlay'] : false, debugRequiredFor : namedArgs['debugRequiredFor']);
+      case r'Overlay.maybeOf':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => Overlay.maybeOf(positionalArgs[0], rootOverlay : namedArgs.containsKey('rootOverlay') ? namedArgs['rootOverlay'] : false);
       default:
         throw HTError.undefined(varName);
     }

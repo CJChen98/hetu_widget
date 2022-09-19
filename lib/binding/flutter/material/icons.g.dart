@@ -1,7 +1,10 @@
 import 'package:hetu_script/hetu_script.dart';
 import 'package:hetu_script/binding.dart';
 import 'package:hetu_script/types.dart';
+import 'package:hetu_script/values.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
 
 
 class PlatformAdaptiveIconsAutoBinding extends HTExternalClass {
@@ -1487,6 +1490,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.arrow_left_rounded;
       case r'Icons.arrow_left_outlined':
         return Icons.arrow_left_outlined;
+      case r'Icons.arrow_outward':
+        return Icons.arrow_outward;
+      case r'Icons.arrow_outward_sharp':
+        return Icons.arrow_outward_sharp;
+      case r'Icons.arrow_outward_rounded':
+        return Icons.arrow_outward_rounded;
+      case r'Icons.arrow_outward_outlined':
+        return Icons.arrow_outward_outlined;
       case r'Icons.arrow_right':
         return Icons.arrow_right;
       case r'Icons.arrow_right_sharp':
@@ -1551,6 +1562,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.assignment_rounded;
       case r'Icons.assignment_outlined':
         return Icons.assignment_outlined;
+      case r'Icons.assignment_add':
+        return Icons.assignment_add;
       case r'Icons.assignment_ind':
         return Icons.assignment_ind;
       case r'Icons.assignment_ind_sharp':
@@ -1591,6 +1604,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.assignment_turned_in_rounded;
       case r'Icons.assignment_turned_in_outlined':
         return Icons.assignment_turned_in_outlined;
+      case r'Icons.assist_walker':
+        return Icons.assist_walker;
+      case r'Icons.assist_walker_sharp':
+        return Icons.assist_walker_sharp;
+      case r'Icons.assist_walker_rounded':
+        return Icons.assist_walker_rounded;
+      case r'Icons.assist_walker_outlined':
+        return Icons.assist_walker_outlined;
       case r'Icons.assistant':
         return Icons.assistant;
       case r'Icons.assistant_sharp':
@@ -1897,6 +1918,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.bar_chart_rounded;
       case r'Icons.bar_chart_outlined':
         return Icons.bar_chart_outlined;
+      case r'Icons.barcode_reader':
+        return Icons.barcode_reader;
       case r'Icons.batch_prediction':
         return Icons.batch_prediction;
       case r'Icons.batch_prediction_sharp':
@@ -2121,6 +2144,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.blender_rounded;
       case r'Icons.blender_outlined':
         return Icons.blender_outlined;
+      case r'Icons.blind':
+        return Icons.blind;
+      case r'Icons.blind_sharp':
+        return Icons.blind_sharp;
+      case r'Icons.blind_rounded':
+        return Icons.blind_rounded;
+      case r'Icons.blind_outlined':
+        return Icons.blind_outlined;
       case r'Icons.blinds':
         return Icons.blinds;
       case r'Icons.blinds_sharp':
@@ -3645,6 +3676,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.construction_rounded;
       case r'Icons.construction_outlined':
         return Icons.construction_outlined;
+      case r'Icons.contact_emergency':
+        return Icons.contact_emergency;
+      case r'Icons.contact_emergency_sharp':
+        return Icons.contact_emergency_sharp;
+      case r'Icons.contact_emergency_rounded':
+        return Icons.contact_emergency_rounded;
+      case r'Icons.contact_emergency_outlined':
+        return Icons.contact_emergency_outlined;
       case r'Icons.contact_mail':
         return Icons.contact_mail;
       case r'Icons.contact_mail_sharp':
@@ -3773,6 +3812,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.control_point_duplicate_rounded;
       case r'Icons.control_point_duplicate_outlined':
         return Icons.control_point_duplicate_outlined;
+      case r'Icons.conveyor_belt':
+        return Icons.conveyor_belt;
       case r'Icons.cookie':
         return Icons.cookie;
       case r'Icons.cookie_sharp':
@@ -4453,6 +4494,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.devices_other_rounded;
       case r'Icons.devices_other_outlined':
         return Icons.devices_other_outlined;
+      case r'Icons.dew_point':
+        return Icons.dew_point;
       case r'Icons.dialer_sip':
         return Icons.dialer_sip;
       case r'Icons.dialer_sip_sharp':
@@ -4709,6 +4752,30 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.display_settings_rounded;
       case r'Icons.display_settings_outlined':
         return Icons.display_settings_outlined;
+      case r'Icons.diversity_1':
+        return Icons.diversity_1;
+      case r'Icons.diversity_1_sharp':
+        return Icons.diversity_1_sharp;
+      case r'Icons.diversity_1_rounded':
+        return Icons.diversity_1_rounded;
+      case r'Icons.diversity_1_outlined':
+        return Icons.diversity_1_outlined;
+      case r'Icons.diversity_2':
+        return Icons.diversity_2;
+      case r'Icons.diversity_2_sharp':
+        return Icons.diversity_2_sharp;
+      case r'Icons.diversity_2_rounded':
+        return Icons.diversity_2_rounded;
+      case r'Icons.diversity_2_outlined':
+        return Icons.diversity_2_outlined;
+      case r'Icons.diversity_3':
+        return Icons.diversity_3;
+      case r'Icons.diversity_3_sharp':
+        return Icons.diversity_3_sharp;
+      case r'Icons.diversity_3_rounded':
+        return Icons.diversity_3_rounded;
+      case r'Icons.diversity_3_outlined':
+        return Icons.diversity_3_outlined;
       case r'Icons.dnd_forwardslash':
         return Icons.dnd_forwardslash;
       case r'Icons.dnd_forwardslash_sharp':
@@ -5183,6 +5250,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.edit_calendar_rounded;
       case r'Icons.edit_calendar_outlined':
         return Icons.edit_calendar_outlined;
+      case r'Icons.edit_document':
+        return Icons.edit_document;
       case r'Icons.edit_location':
         return Icons.edit_location;
       case r'Icons.edit_location_sharp':
@@ -5231,6 +5300,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.edit_road_rounded;
       case r'Icons.edit_road_outlined':
         return Icons.edit_road_outlined;
+      case r'Icons.edit_square':
+        return Icons.edit_square;
       case r'Icons.egg':
         return Icons.egg;
       case r'Icons.egg_sharp':
@@ -5743,6 +5814,46 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.face_rounded;
       case r'Icons.face_outlined':
         return Icons.face_outlined;
+      case r'Icons.face_2':
+        return Icons.face_2;
+      case r'Icons.face_2_sharp':
+        return Icons.face_2_sharp;
+      case r'Icons.face_2_rounded':
+        return Icons.face_2_rounded;
+      case r'Icons.face_2_outlined':
+        return Icons.face_2_outlined;
+      case r'Icons.face_3':
+        return Icons.face_3;
+      case r'Icons.face_3_sharp':
+        return Icons.face_3_sharp;
+      case r'Icons.face_3_rounded':
+        return Icons.face_3_rounded;
+      case r'Icons.face_3_outlined':
+        return Icons.face_3_outlined;
+      case r'Icons.face_4':
+        return Icons.face_4;
+      case r'Icons.face_4_sharp':
+        return Icons.face_4_sharp;
+      case r'Icons.face_4_rounded':
+        return Icons.face_4_rounded;
+      case r'Icons.face_4_outlined':
+        return Icons.face_4_outlined;
+      case r'Icons.face_5':
+        return Icons.face_5;
+      case r'Icons.face_5_sharp':
+        return Icons.face_5_sharp;
+      case r'Icons.face_5_rounded':
+        return Icons.face_5_rounded;
+      case r'Icons.face_5_outlined':
+        return Icons.face_5_outlined;
+      case r'Icons.face_6':
+        return Icons.face_6;
+      case r'Icons.face_6_sharp':
+        return Icons.face_6_sharp;
+      case r'Icons.face_6_rounded':
+        return Icons.face_6_rounded;
+      case r'Icons.face_6_outlined':
+        return Icons.face_6_outlined;
       case r'Icons.face_retouching_natural':
         return Icons.face_retouching_natural;
       case r'Icons.face_retouching_natural_sharp':
@@ -6005,6 +6116,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.file_upload_rounded;
       case r'Icons.file_upload_outlined':
         return Icons.file_upload_outlined;
+      case r'Icons.file_upload_off':
+        return Icons.file_upload_off;
       case r'Icons.filter':
         return Icons.filter;
       case r'Icons.filter_sharp':
@@ -6449,6 +6562,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.flourescent_rounded;
       case r'Icons.flourescent_outlined':
         return Icons.flourescent_outlined;
+      case r'Icons.fluorescent':
+        return Icons.fluorescent;
+      case r'Icons.fluorescent_sharp':
+        return Icons.fluorescent_sharp;
+      case r'Icons.fluorescent_rounded':
+        return Icons.fluorescent_rounded;
+      case r'Icons.fluorescent_outlined':
+        return Icons.fluorescent_outlined;
       case r'Icons.flutter_dash':
         return Icons.flutter_dash;
       case r'Icons.flutter_dash_sharp':
@@ -6595,6 +6716,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.fork_right_rounded;
       case r'Icons.fork_right_outlined':
         return Icons.fork_right_outlined;
+      case r'Icons.forklift':
+        return Icons.forklift;
       case r'Icons.format_align_center':
         return Icons.format_align_center;
       case r'Icons.format_align_center_sharp':
@@ -6707,6 +6830,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.format_list_bulleted_rounded;
       case r'Icons.format_list_bulleted_outlined':
         return Icons.format_list_bulleted_outlined;
+      case r'Icons.format_list_bulleted_add':
+        return Icons.format_list_bulleted_add;
       case r'Icons.format_list_numbered':
         return Icons.format_list_numbered;
       case r'Icons.format_list_numbered_sharp':
@@ -6891,6 +7016,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.front_hand_rounded;
       case r'Icons.front_hand_outlined':
         return Icons.front_hand_outlined;
+      case r'Icons.front_loader':
+        return Icons.front_loader;
       case r'Icons.fullscreen':
         return Icons.fullscreen;
       case r'Icons.fullscreen_sharp':
@@ -7227,6 +7354,22 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.groups_rounded;
       case r'Icons.groups_outlined':
         return Icons.groups_outlined;
+      case r'Icons.groups_2':
+        return Icons.groups_2;
+      case r'Icons.groups_2_sharp':
+        return Icons.groups_2_sharp;
+      case r'Icons.groups_2_rounded':
+        return Icons.groups_2_rounded;
+      case r'Icons.groups_2_outlined':
+        return Icons.groups_2_outlined;
+      case r'Icons.groups_3':
+        return Icons.groups_3;
+      case r'Icons.groups_3_sharp':
+        return Icons.groups_3_sharp;
+      case r'Icons.groups_3_rounded':
+        return Icons.groups_3_rounded;
+      case r'Icons.groups_3_outlined':
+        return Icons.groups_3_outlined;
       case r'Icons.h_mobiledata':
         return Icons.h_mobiledata;
       case r'Icons.h_mobiledata_sharp':
@@ -9275,6 +9418,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.lyrics_rounded;
       case r'Icons.lyrics_outlined':
         return Icons.lyrics_outlined;
+      case r'Icons.macro_off':
+        return Icons.macro_off;
+      case r'Icons.macro_off_sharp':
+        return Icons.macro_off_sharp;
+      case r'Icons.macro_off_rounded':
+        return Icons.macro_off_rounded;
+      case r'Icons.macro_off_outlined':
+        return Icons.macro_off_outlined;
       case r'Icons.mail':
         return Icons.mail;
       case r'Icons.mail_sharp':
@@ -9315,6 +9466,30 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.man_rounded;
       case r'Icons.man_outlined':
         return Icons.man_outlined;
+      case r'Icons.man_2':
+        return Icons.man_2;
+      case r'Icons.man_2_sharp':
+        return Icons.man_2_sharp;
+      case r'Icons.man_2_rounded':
+        return Icons.man_2_rounded;
+      case r'Icons.man_2_outlined':
+        return Icons.man_2_outlined;
+      case r'Icons.man_3':
+        return Icons.man_3;
+      case r'Icons.man_3_sharp':
+        return Icons.man_3_sharp;
+      case r'Icons.man_3_rounded':
+        return Icons.man_3_rounded;
+      case r'Icons.man_3_outlined':
+        return Icons.man_3_outlined;
+      case r'Icons.man_4':
+        return Icons.man_4;
+      case r'Icons.man_4_sharp':
+        return Icons.man_4_sharp;
+      case r'Icons.man_4_rounded':
+        return Icons.man_4_rounded;
+      case r'Icons.man_4_outlined':
+        return Icons.man_4_outlined;
       case r'Icons.manage_accounts':
         return Icons.manage_accounts;
       case r'Icons.manage_accounts_sharp':
@@ -10011,6 +10186,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.movie_creation_rounded;
       case r'Icons.movie_creation_outlined':
         return Icons.movie_creation_outlined;
+      case r'Icons.movie_edit':
+        return Icons.movie_edit;
       case r'Icons.movie_filter':
         return Icons.movie_filter;
       case r'Icons.movie_filter_sharp':
@@ -10911,6 +11088,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.palette_rounded;
       case r'Icons.palette_outlined':
         return Icons.palette_outlined;
+      case r'Icons.pallet':
+        return Icons.pallet;
       case r'Icons.pan_tool':
         return Icons.pan_tool;
       case r'Icons.pan_tool_sharp':
@@ -11279,6 +11458,30 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.person_rounded;
       case r'Icons.person_outlined':
         return Icons.person_outlined;
+      case r'Icons.person_2':
+        return Icons.person_2;
+      case r'Icons.person_2_sharp':
+        return Icons.person_2_sharp;
+      case r'Icons.person_2_rounded':
+        return Icons.person_2_rounded;
+      case r'Icons.person_2_outlined':
+        return Icons.person_2_outlined;
+      case r'Icons.person_3':
+        return Icons.person_3;
+      case r'Icons.person_3_sharp':
+        return Icons.person_3_sharp;
+      case r'Icons.person_3_rounded':
+        return Icons.person_3_rounded;
+      case r'Icons.person_3_outlined':
+        return Icons.person_3_outlined;
+      case r'Icons.person_4':
+        return Icons.person_4;
+      case r'Icons.person_4_sharp':
+        return Icons.person_4_sharp;
+      case r'Icons.person_4_rounded':
+        return Icons.person_4_rounded;
+      case r'Icons.person_4_outlined':
+        return Icons.person_4_outlined;
       case r'Icons.person_add':
         return Icons.person_add;
       case r'Icons.person_add_sharp':
@@ -12133,6 +12336,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.psychology_rounded;
       case r'Icons.psychology_outlined':
         return Icons.psychology_outlined;
+      case r'Icons.psychology_alt':
+        return Icons.psychology_alt;
+      case r'Icons.psychology_alt_sharp':
+        return Icons.psychology_alt_sharp;
+      case r'Icons.psychology_alt_rounded':
+        return Icons.psychology_alt_rounded;
+      case r'Icons.psychology_alt_outlined':
+        return Icons.psychology_alt_outlined;
       case r'Icons.public':
         return Icons.public;
       case r'Icons.public_sharp':
@@ -12429,6 +12640,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.real_estate_agent_rounded;
       case r'Icons.real_estate_agent_outlined':
         return Icons.real_estate_agent_outlined;
+      case r'Icons.rebase_edit':
+        return Icons.rebase_edit;
       case r'Icons.receipt':
         return Icons.receipt;
       case r'Icons.receipt_sharp':
@@ -12613,6 +12826,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.reorder_rounded;
       case r'Icons.reorder_outlined':
         return Icons.reorder_outlined;
+      case r'Icons.repartition':
+        return Icons.repartition;
+      case r'Icons.repartition_sharp':
+        return Icons.repartition_sharp;
+      case r'Icons.repartition_rounded':
+        return Icons.repartition_rounded;
+      case r'Icons.repartition_outlined':
+        return Icons.repartition_outlined;
       case r'Icons.repeat':
         return Icons.repeat;
       case r'Icons.repeat_sharp':
@@ -13709,6 +13930,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.severe_cold_rounded;
       case r'Icons.severe_cold_outlined':
         return Icons.severe_cold_outlined;
+      case r'Icons.shape_line':
+        return Icons.shape_line;
+      case r'Icons.shape_line_sharp':
+        return Icons.shape_line_sharp;
+      case r'Icons.shape_line_rounded':
+        return Icons.shape_line_rounded;
+      case r'Icons.shape_line_outlined':
+        return Icons.shape_line_outlined;
       case r'Icons.share':
         return Icons.share;
       case r'Icons.share_sharp':
@@ -13733,6 +13962,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.share_location_rounded;
       case r'Icons.share_location_outlined':
         return Icons.share_location_outlined;
+      case r'Icons.shelves':
+        return Icons.shelves;
       case r'Icons.shield':
         return Icons.shield;
       case r'Icons.shield_sharp':
@@ -16051,6 +16282,8 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.trip_origin_rounded;
       case r'Icons.trip_origin_outlined':
         return Icons.trip_origin_outlined;
+      case r'Icons.trolley':
+        return Icons.trolley;
       case r'Icons.troubleshoot':
         return Icons.troubleshoot;
       case r'Icons.troubleshoot_sharp':
@@ -16243,6 +16476,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.unfold_less_rounded;
       case r'Icons.unfold_less_outlined':
         return Icons.unfold_less_outlined;
+      case r'Icons.unfold_less_double':
+        return Icons.unfold_less_double;
+      case r'Icons.unfold_less_double_sharp':
+        return Icons.unfold_less_double_sharp;
+      case r'Icons.unfold_less_double_rounded':
+        return Icons.unfold_less_double_rounded;
+      case r'Icons.unfold_less_double_outlined':
+        return Icons.unfold_less_double_outlined;
       case r'Icons.unfold_more':
         return Icons.unfold_more;
       case r'Icons.unfold_more_sharp':
@@ -16251,6 +16492,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.unfold_more_rounded;
       case r'Icons.unfold_more_outlined':
         return Icons.unfold_more_outlined;
+      case r'Icons.unfold_more_double':
+        return Icons.unfold_more_double;
+      case r'Icons.unfold_more_double_sharp':
+        return Icons.unfold_more_double_sharp;
+      case r'Icons.unfold_more_double_rounded':
+        return Icons.unfold_more_double_rounded;
+      case r'Icons.unfold_more_double_outlined':
+        return Icons.unfold_more_double_outlined;
       case r'Icons.unpublished':
         return Icons.unpublished;
       case r'Icons.unpublished_sharp':
@@ -16459,6 +16708,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.video_camera_front_rounded;
       case r'Icons.video_camera_front_outlined':
         return Icons.video_camera_front_outlined;
+      case r'Icons.video_chat':
+        return Icons.video_chat;
+      case r'Icons.video_chat_sharp':
+        return Icons.video_chat_sharp;
+      case r'Icons.video_chat_rounded':
+        return Icons.video_chat_rounded;
+      case r'Icons.video_chat_outlined':
+        return Icons.video_chat_outlined;
       case r'Icons.video_collection':
         return Icons.video_collection;
       case r'Icons.video_collection_sharp':
@@ -17081,6 +17338,12 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.web_asset_off_outlined;
       case r'Icons.web_stories':
         return Icons.web_stories;
+      case r'Icons.web_stories_sharp':
+        return Icons.web_stories_sharp;
+      case r'Icons.web_stories_rounded':
+        return Icons.web_stories_rounded;
+      case r'Icons.web_stories_outlined':
+        return Icons.web_stories_outlined;
       case r'Icons.webhook':
         return Icons.webhook;
       case r'Icons.webhook_sharp':
@@ -17319,6 +17582,14 @@ class IconsAutoBinding extends HTExternalClass {
         return Icons.woman_rounded;
       case r'Icons.woman_outlined':
         return Icons.woman_outlined;
+      case r'Icons.woman_2':
+        return Icons.woman_2;
+      case r'Icons.woman_2_sharp':
+        return Icons.woman_2_sharp;
+      case r'Icons.woman_2_rounded':
+        return Icons.woman_2_rounded;
+      case r'Icons.woman_2_outlined':
+        return Icons.woman_2_outlined;
       case r'Icons.woo_commerce':
         return Icons.woo_commerce;
       case r'Icons.woo_commerce_sharp':

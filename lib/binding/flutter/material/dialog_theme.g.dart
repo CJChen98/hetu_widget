@@ -18,7 +18,7 @@ class DialogThemeAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => DialogTheme(backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null, iconColor : namedArgs.containsKey('iconColor') ? namedArgs['iconColor'] : null, titleTextStyle : namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null, contentTextStyle : namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null, actionsPadding : namedArgs.containsKey('actionsPadding') ? namedArgs['actionsPadding'] : null);
+              List<HTType> typeArgs = const []}) => DialogTheme(backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null, iconColor : namedArgs.containsKey('iconColor') ? namedArgs['iconColor'] : null, titleTextStyle : namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null, contentTextStyle : namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null, actionsPadding : namedArgs.containsKey('actionsPadding') ? namedArgs['actionsPadding'] : null);
       case r'DialogTheme.of_alias':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -52,6 +52,10 @@ extension DialogThemeBinding on DialogTheme {
         return backgroundColor;
       case r'elevation':
         return elevation;
+      case r'shadowColor':
+        return shadowColor;
+      case r'surfaceTintColor':
+        return surfaceTintColor;
       case r'shape':
         return shape;
       case r'alignment':
@@ -70,7 +74,7 @@ extension DialogThemeBinding on DialogTheme {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.copyWith(backgroundColor : namedArgs['backgroundColor'], elevation : namedArgs['elevation'], shape : namedArgs['shape'], alignment : namedArgs['alignment'], iconColor : namedArgs['iconColor'], titleTextStyle : namedArgs['titleTextStyle'], contentTextStyle : namedArgs['contentTextStyle'], actionsPadding : namedArgs['actionsPadding']);
+              List<HTType> typeArgs = const []}) => this.copyWith(backgroundColor : namedArgs['backgroundColor'], elevation : namedArgs['elevation'], shadowColor : namedArgs['shadowColor'], surfaceTintColor : namedArgs['surfaceTintColor'], shape : namedArgs['shape'], alignment : namedArgs['alignment'], iconColor : namedArgs['iconColor'], titleTextStyle : namedArgs['titleTextStyle'], contentTextStyle : namedArgs['contentTextStyle'], actionsPadding : namedArgs['actionsPadding']);
       case r'debugFillProperties':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

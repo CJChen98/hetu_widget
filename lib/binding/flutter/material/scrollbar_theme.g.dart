@@ -71,7 +71,7 @@ extension ScrollbarThemeDataBinding on ScrollbarThemeData {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.copyWith(thumbVisibility : namedArgs['thumbVisibility'], thickness : namedArgs['thickness'], trackVisibility : namedArgs['trackVisibility'], showTrackOnHover : namedArgs['showTrackOnHover'], interactive : namedArgs['interactive'], radius : namedArgs['radius'], thumbColor : namedArgs['thumbColor'], trackColor : namedArgs['trackColor'], trackBorderColor : namedArgs['trackBorderColor'], crossAxisMargin : namedArgs['crossAxisMargin'], mainAxisMargin : namedArgs['mainAxisMargin'], minThumbLength : namedArgs['minThumbLength'], isAlwaysShown : namedArgs['isAlwaysShown']);
+              List<HTType> typeArgs = const []}) => this.copyWith(thumbVisibility : namedArgs['thumbVisibility'], thickness : namedArgs['thickness'], trackVisibility : namedArgs['trackVisibility'], interactive : namedArgs['interactive'], radius : namedArgs['radius'], thumbColor : namedArgs['thumbColor'], trackColor : namedArgs['trackColor'], trackBorderColor : namedArgs['trackBorderColor'], crossAxisMargin : namedArgs['crossAxisMargin'], mainAxisMargin : namedArgs['mainAxisMargin'], minThumbLength : namedArgs['minThumbLength'], isAlwaysShown : namedArgs['isAlwaysShown'], showTrackOnHover : namedArgs['showTrackOnHover']);
       case r'debugFillProperties':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

@@ -27,6 +27,8 @@ class DefaultSelectionStyleAutoBinding extends HTExternalClass {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => DefaultSelectionStyle.of(positionalArgs[0]);
+      case r'DefaultSelectionStyle.defaultColor':
+        return DefaultSelectionStyle.defaultColor;
       default:
         throw HTError.undefined(varName);
     }

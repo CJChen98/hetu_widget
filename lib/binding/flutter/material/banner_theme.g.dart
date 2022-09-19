@@ -18,7 +18,7 @@ class MaterialBannerThemeDataAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => MaterialBannerThemeData(backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, contentTextStyle : namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, leadingPadding : namedArgs.containsKey('leadingPadding') ? namedArgs['leadingPadding'] : null);
+              List<HTType> typeArgs = const []}) => MaterialBannerThemeData(backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, dividerColor : namedArgs.containsKey('dividerColor') ? namedArgs['dividerColor'] : null, contentTextStyle : namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, leadingPadding : namedArgs.containsKey('leadingPadding') ? namedArgs['leadingPadding'] : null);
       case r'MaterialBannerThemeData.lerp':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -45,6 +45,12 @@ extension MaterialBannerThemeDataBinding on MaterialBannerThemeData {
         return const HTExternalType(r'MaterialBannerThemeData');
       case r'backgroundColor':
         return backgroundColor;
+      case r'surfaceTintColor':
+        return surfaceTintColor;
+      case r'shadowColor':
+        return shadowColor;
+      case r'dividerColor':
+        return dividerColor;
       case r'contentTextStyle':
         return contentTextStyle;
       case r'elevation':
@@ -59,7 +65,7 @@ extension MaterialBannerThemeDataBinding on MaterialBannerThemeData {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.copyWith(backgroundColor : namedArgs['backgroundColor'], contentTextStyle : namedArgs['contentTextStyle'], elevation : namedArgs['elevation'], padding : namedArgs['padding'], leadingPadding : namedArgs['leadingPadding']);
+              List<HTType> typeArgs = const []}) => this.copyWith(backgroundColor : namedArgs['backgroundColor'], surfaceTintColor : namedArgs['surfaceTintColor'], shadowColor : namedArgs['shadowColor'], dividerColor : namedArgs['dividerColor'], contentTextStyle : namedArgs['contentTextStyle'], elevation : namedArgs['elevation'], padding : namedArgs['padding'], leadingPadding : namedArgs['leadingPadding']);
       case r'debugFillProperties':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

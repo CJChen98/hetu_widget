@@ -1,4 +1,4 @@
-FLUTTER_ROOT="/Users/chunjinchen/fvm/versions/stable"
+FLUTTER_ROOT="/Users/chunjinchen/fvm/versions/master/"
 
 ./ht-binding-generator \
 -f $FLUTTER_ROOT/ \

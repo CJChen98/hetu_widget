@@ -60,6 +60,11 @@ extension LayerBinding on Layer {
         return owner;
       case r'attached':
         return attached;
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'describeClipBounds':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -230,6 +235,11 @@ extension PictureLayerBinding on PictureLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs['onlyFirst']);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'describeClipBounds':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -394,6 +404,11 @@ extension TextureLayerBinding on TextureLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs['onlyFirst']);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'describeClipBounds':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -540,6 +555,11 @@ extension PlatformViewLayerBinding on PlatformViewLayer {
         return owner;
       case r'attached':
         return attached;
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'addToScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -707,6 +727,11 @@ extension PerformanceOverlayLayerBinding on PerformanceOverlayLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.findAnnotations(positionalArgs[0], positionalArgs[1], onlyFirst : namedArgs['onlyFirst']);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'describeClipBounds':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -858,6 +883,11 @@ extension ContainerLayerBinding on ContainerLayer {
         return owner;
       case r'attached':
         return attached;
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -1088,6 +1118,16 @@ extension OffsetLayerBinding on OffsetLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.toImage(positionalArgs[0], pixelRatio : namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
+      case r'toImageSync':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.toImageSync(positionalArgs[0], pixelRatio : namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -1298,6 +1338,11 @@ extension ClipRectLayerBinding on ClipRectLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -1511,6 +1556,11 @@ extension ClipRRectLayerBinding on ClipRRectLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -1724,6 +1774,11 @@ extension ClipPathLayerBinding on ClipPathLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -1925,6 +1980,11 @@ extension ColorFilterLayerBinding on ColorFilterLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -2133,6 +2193,11 @@ extension ImageFilterLayerBinding on ImageFilterLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -2358,6 +2423,16 @@ extension TransformLayerBinding on TransformLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.toImage(positionalArgs[0], pixelRatio : namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
+      case r'toImageSync':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.toImageSync(positionalArgs[0], pixelRatio : namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -2573,6 +2648,16 @@ extension OpacityLayerBinding on OpacityLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.toImage(positionalArgs[0], pixelRatio : namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
+      case r'toImageSync':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.toImageSync(positionalArgs[0], pixelRatio : namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -2775,6 +2860,11 @@ extension ShaderMaskLayerBinding on ShaderMaskLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -2991,6 +3081,11 @@ extension BackdropFilterLayerBinding on BackdropFilterLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -3203,6 +3298,11 @@ extension PhysicalModelLayerBinding on PhysicalModelLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -3499,6 +3599,11 @@ extension LeaderLayerBinding on LeaderLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -3713,6 +3818,11 @@ extension FollowerLayerBinding on FollowerLayer {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
+      case r'supportsRasterization':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.supportsRasterization();
       case r'buildScene':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

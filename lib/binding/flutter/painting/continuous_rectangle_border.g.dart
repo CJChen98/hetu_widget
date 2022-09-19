@@ -45,6 +45,8 @@ extension ContinuousRectangleBorderBinding on ContinuousRectangleBorder {
         return dimensions;
       case r'hashCode':
         return hashCode;
+      case r'preferPaintInterior':
+        return preferPaintInterior;
       case r'scale':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -85,6 +87,11 @@ extension ContinuousRectangleBorderBinding on ContinuousRectangleBorder {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.toString();
+      case r'paintInterior':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.paintInterior(positionalArgs[0], positionalArgs[1], positionalArgs[2], textDirection : namedArgs['textDirection']);
       default:
         throw HTError.undefined(varName);
     }

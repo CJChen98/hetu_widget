@@ -19,7 +19,7 @@ class DrawerThemeDataAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => DrawerThemeData(backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, scrimColor : namedArgs.containsKey('scrimColor') ? namedArgs['scrimColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, width : namedArgs.containsKey('width') ? namedArgs['width'] : null);
+              List<HTType> typeArgs = const []}) => DrawerThemeData(backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, scrimColor : namedArgs.containsKey('scrimColor') ? namedArgs['scrimColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, width : namedArgs.containsKey('width') ? namedArgs['width'] : null);
       case r'DrawerThemeData.lerp':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -50,6 +50,10 @@ extension DrawerThemeDataBinding on DrawerThemeData {
         return scrimColor;
       case r'elevation':
         return elevation;
+      case r'shadowColor':
+        return shadowColor;
+      case r'surfaceTintColor':
+        return surfaceTintColor;
       case r'shape':
         return shape;
       case r'width':
@@ -60,7 +64,7 @@ extension DrawerThemeDataBinding on DrawerThemeData {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.copyWith(backgroundColor : namedArgs['backgroundColor'], scrimColor : namedArgs['scrimColor'], elevation : namedArgs['elevation'], shape : namedArgs['shape'], width : namedArgs['width']);
+              List<HTType> typeArgs = const []}) => this.copyWith(backgroundColor : namedArgs['backgroundColor'], scrimColor : namedArgs['scrimColor'], elevation : namedArgs['elevation'], shadowColor : namedArgs['shadowColor'], surfaceTintColor : namedArgs['surfaceTintColor'], shape : namedArgs['shape'], width : namedArgs['width']);
       case r'debugFillProperties':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

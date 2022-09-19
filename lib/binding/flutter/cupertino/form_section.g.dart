@@ -4,7 +4,7 @@ import 'package:hetu_script/types.dart';
 import 'package:hetu_script/values.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
-const _kDefaultInsetGroupedRowsMargin = EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 10.0);
+const _kFormDefaultInsetGroupedRowsMargin = EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 10.0);
 
 
 class CupertinoFormSectionAutoBinding extends HTExternalClass {
@@ -22,7 +22,7 @@ class CupertinoFormSectionAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => CupertinoFormSection.insetGrouped(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, children : List<Widget>.from(namedArgs['children']), header : namedArgs.containsKey('header') ? namedArgs['header'] : null, footer : namedArgs.containsKey('footer') ? namedArgs['footer'] : null, margin : namedArgs.containsKey('margin') ? namedArgs['margin'] : _kDefaultInsetGroupedRowsMargin, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : CupertinoColors.systemGroupedBackground, decoration : namedArgs.containsKey('decoration') ? namedArgs['decoration'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none);
+              List<HTType> typeArgs = const []}) => CupertinoFormSection.insetGrouped(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, children : List<Widget>.from(namedArgs['children']), header : namedArgs.containsKey('header') ? namedArgs['header'] : null, footer : namedArgs.containsKey('footer') ? namedArgs['footer'] : null, margin : namedArgs.containsKey('margin') ? namedArgs['margin'] : _kFormDefaultInsetGroupedRowsMargin, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : CupertinoColors.systemGroupedBackground, decoration : namedArgs.containsKey('decoration') ? namedArgs['decoration'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none);
       default:
         throw HTError.undefined(varName);
     }

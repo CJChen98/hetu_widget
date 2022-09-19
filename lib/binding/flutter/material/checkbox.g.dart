@@ -16,7 +16,7 @@ class CheckboxAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => Checkbox(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, value : namedArgs['value'], tristate : namedArgs.containsKey('tristate') ? namedArgs['tristate'] : false, onChanged : namedArgs['onChanged'], mouseCursor : namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null, activeColor : namedArgs.containsKey('activeColor') ? namedArgs['activeColor'] : null, fillColor : namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null, checkColor : namedArgs.containsKey('checkColor') ? namedArgs['checkColor'] : null, focusColor : namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null, hoverColor : namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null, overlayColor : namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null, splashRadius : namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null, materialTapTargetSize : namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null, visualDensity : namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, side : namedArgs.containsKey('side') ? namedArgs['side'] : null);
+              List<HTType> typeArgs = const []}) => Checkbox(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, value : namedArgs['value'], tristate : namedArgs.containsKey('tristate') ? namedArgs['tristate'] : false, onChanged : namedArgs['onChanged'], mouseCursor : namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null, activeColor : namedArgs.containsKey('activeColor') ? namedArgs['activeColor'] : null, fillColor : namedArgs.containsKey('fillColor') ? namedArgs['fillColor'] : null, checkColor : namedArgs.containsKey('checkColor') ? namedArgs['checkColor'] : null, focusColor : namedArgs.containsKey('focusColor') ? namedArgs['focusColor'] : null, hoverColor : namedArgs.containsKey('hoverColor') ? namedArgs['hoverColor'] : null, overlayColor : namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null, splashRadius : namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null, materialTapTargetSize : namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null, visualDensity : namedArgs.containsKey('visualDensity') ? namedArgs['visualDensity'] : null, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, autofocus : namedArgs.containsKey('autofocus') ? namedArgs['autofocus'] : false, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, side : namedArgs.containsKey('side') ? namedArgs['side'] : null, isError : namedArgs.containsKey('isError') ? namedArgs['isError'] : false);
       case r'Checkbox.width':
         return Checkbox.width;
       default:
@@ -72,6 +72,8 @@ extension CheckboxBinding on Checkbox {
         return shape;
       case r'side':
         return side;
+      case r'isError':
+        return isError;
       case r'createState':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

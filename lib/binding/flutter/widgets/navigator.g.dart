@@ -425,8 +425,8 @@ extension NavigatorStateBinding on NavigatorState {
     switch (varName) {
       case r'typeid':
         return const HTExternalType(r'NavigatorState');
-      case r'focusScopeNode':
-        return focusScopeNode;
+      case r'focusNode':
+        return focusNode;
       case r'userGestureInProgressNotifier':
         return userGestureInProgressNotifier;
       case r'restorationId':

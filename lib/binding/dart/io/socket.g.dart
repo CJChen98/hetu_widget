@@ -724,6 +724,16 @@ class ResourceHandleAutoBinding extends HTExternalClass {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => ResourceHandle.fromStdout(positionalArgs[0]);
+      case r'ResourceHandle.fromReadPipe':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => ResourceHandle.fromReadPipe(positionalArgs[0]);
+      case r'ResourceHandle.fromWritePipe':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => ResourceHandle.fromWritePipe(positionalArgs[0]);
       default:
         throw HTError.undefined(varName);
     }
@@ -763,6 +773,16 @@ extension ResourceHandleBinding on ResourceHandle {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.toRawDatagramSocket();
+      case r'toReadPipe':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.toReadPipe();
+      case r'toWritePipe':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.toWritePipe();
       default:
         throw HTError.undefined(varName);
     }

@@ -4,6 +4,7 @@ import 'package:hetu_script/types.dart';
 import 'package:hetu_script/values.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/rendering.dart';
 
 
 class SelectionAreaAutoBinding extends HTExternalClass {
@@ -16,7 +17,7 @@ class SelectionAreaAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => SelectionArea(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, selectionControls : namedArgs.containsKey('selectionControls') ? namedArgs['selectionControls'] : null, child : namedArgs['child']);
+              List<HTType> typeArgs = const []}) => SelectionArea(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, focusNode : namedArgs.containsKey('focusNode') ? namedArgs['focusNode'] : null, selectionControls : namedArgs.containsKey('selectionControls') ? namedArgs['selectionControls'] : null, magnifierConfiguration : namedArgs.containsKey('magnifierConfiguration') ? namedArgs['magnifierConfiguration'] : null, onSelectionChanged : namedArgs.containsKey('onSelectionChanged') ? namedArgs['onSelectionChanged'] : null, child : namedArgs['child']);
       default:
         throw HTError.undefined(varName);
     }
@@ -36,10 +37,14 @@ extension SelectionAreaBinding on SelectionArea {
     switch (varName) {
       case r'typeid':
         return const HTExternalType(r'SelectionArea');
+      case r'magnifierConfiguration':
+        return magnifierConfiguration;
       case r'focusNode':
         return focusNode;
       case r'selectionControls':
         return selectionControls;
+      case r'onSelectionChanged':
+        return onSelectionChanged;
       case r'child':
         return child;
       case r'createState':

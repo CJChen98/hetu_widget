@@ -19,7 +19,7 @@ class SwitchThemeDataAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => SwitchThemeData(thumbColor : namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null, trackColor : namedArgs.containsKey('trackColor') ? namedArgs['trackColor'] : null, materialTapTargetSize : namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null, mouseCursor : namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null, overlayColor : namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null, splashRadius : namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null);
+              List<HTType> typeArgs = const []}) => SwitchThemeData(thumbColor : namedArgs.containsKey('thumbColor') ? namedArgs['thumbColor'] : null, trackColor : namedArgs.containsKey('trackColor') ? namedArgs['trackColor'] : null, materialTapTargetSize : namedArgs.containsKey('materialTapTargetSize') ? namedArgs['materialTapTargetSize'] : null, mouseCursor : namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null, overlayColor : namedArgs.containsKey('overlayColor') ? namedArgs['overlayColor'] : null, splashRadius : namedArgs.containsKey('splashRadius') ? namedArgs['splashRadius'] : null, thumbIcon : namedArgs.containsKey('thumbIcon') ? namedArgs['thumbIcon'] : null);
       case r'SwitchThemeData.lerp':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -56,13 +56,15 @@ extension SwitchThemeDataBinding on SwitchThemeData {
         return overlayColor;
       case r'splashRadius':
         return splashRadius;
+      case r'thumbIcon':
+        return thumbIcon;
       case r'hashCode':
         return hashCode;
       case r'copyWith':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.copyWith(thumbColor : namedArgs['thumbColor'], trackColor : namedArgs['trackColor'], materialTapTargetSize : namedArgs['materialTapTargetSize'], mouseCursor : namedArgs['mouseCursor'], overlayColor : namedArgs['overlayColor'], splashRadius : namedArgs['splashRadius']);
+              List<HTType> typeArgs = const []}) => this.copyWith(thumbColor : namedArgs['thumbColor'], trackColor : namedArgs['trackColor'], materialTapTargetSize : namedArgs['materialTapTargetSize'], mouseCursor : namedArgs['mouseCursor'], overlayColor : namedArgs['overlayColor'], splashRadius : namedArgs['splashRadius'], thumbIcon : namedArgs['thumbIcon']);
       case r'debugFillProperties':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

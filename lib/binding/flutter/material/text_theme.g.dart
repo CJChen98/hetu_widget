@@ -72,32 +72,6 @@ extension TextThemeBinding on TextTheme {
         return labelMedium;
       case r'labelSmall':
         return labelSmall;
-      case r'headline1':
-        return headline1;
-      case r'headline2':
-        return headline2;
-      case r'headline3':
-        return headline3;
-      case r'headline4':
-        return headline4;
-      case r'headline5':
-        return headline5;
-      case r'headline6':
-        return headline6;
-      case r'subtitle1':
-        return subtitle1;
-      case r'subtitle2':
-        return subtitle2;
-      case r'bodyText1':
-        return bodyText1;
-      case r'bodyText2':
-        return bodyText2;
-      case r'caption':
-        return caption;
-      case r'button':
-        return button;
-      case r'overline':
-        return overline;
       case r'hashCode':
         return hashCode;
       case r'copyWith':

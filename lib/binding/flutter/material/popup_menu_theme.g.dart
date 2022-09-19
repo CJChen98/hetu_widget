@@ -7,6 +7,41 @@ import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 
+class PopupMenuPositionAutoBinding extends HTExternalClass {
+  PopupMenuPositionAutoBinding() : super(r'PopupMenuPosition');
+
+  @override
+  dynamic memberGet(String varName, {String? from}) {
+    switch (varName) {
+      case r'values':
+        return PopupMenuPosition.values;
+      case r'PopupMenuPosition.over':
+        return PopupMenuPosition.over;
+      case r'PopupMenuPosition.under':
+        return PopupMenuPosition.under;
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+
+
+  @override
+  dynamic instanceMemberGet(dynamic object, String varName) {
+    switch (varName) {
+      case r'typeid':
+        return const HTExternalType(r'PopupMenuPosition');
+      case r'index':
+        return (object as PopupMenuPosition).index;
+      case r'toString':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => (object as PopupMenuPosition).toString();
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+}
 
 class PopupMenuThemeDataAutoBinding extends HTExternalClass {
   PopupMenuThemeDataAutoBinding() : super(r'PopupMenuThemeData');
@@ -18,7 +53,7 @@ class PopupMenuThemeDataAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => PopupMenuThemeData(color : namedArgs.containsKey('color') ? namedArgs['color'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, textStyle : namedArgs.containsKey('textStyle') ? namedArgs['textStyle'] : null, enableFeedback : namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : null, mouseCursor : namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null);
+              List<HTType> typeArgs = const []}) => PopupMenuThemeData(color : namedArgs.containsKey('color') ? namedArgs['color'] : null, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, textStyle : namedArgs.containsKey('textStyle') ? namedArgs['textStyle'] : null, enableFeedback : namedArgs.containsKey('enableFeedback') ? namedArgs['enableFeedback'] : null, mouseCursor : namedArgs.containsKey('mouseCursor') ? namedArgs['mouseCursor'] : null, position : namedArgs.containsKey('position') ? namedArgs['position'] : null);
       case r'PopupMenuThemeData.lerp':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -55,13 +90,15 @@ extension PopupMenuThemeDataBinding on PopupMenuThemeData {
         return enableFeedback;
       case r'mouseCursor':
         return mouseCursor;
+      case r'position':
+        return position;
       case r'hashCode':
         return hashCode;
       case r'copyWith':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.copyWith(color : namedArgs['color'], shape : namedArgs['shape'], elevation : namedArgs['elevation'], textStyle : namedArgs['textStyle'], enableFeedback : namedArgs['enableFeedback'], mouseCursor : namedArgs['mouseCursor']);
+              List<HTType> typeArgs = const []}) => this.copyWith(color : namedArgs['color'], shape : namedArgs['shape'], elevation : namedArgs['elevation'], textStyle : namedArgs['textStyle'], enableFeedback : namedArgs['enableFeedback'], mouseCursor : namedArgs['mouseCursor'], position : namedArgs['position']);
       case r'debugFillProperties':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

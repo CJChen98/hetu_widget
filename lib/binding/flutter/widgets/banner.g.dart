@@ -98,6 +98,11 @@ extension BannerPainterBinding on BannerPainter {
         return textStyle;
       case r'semanticsBuilder':
         return semanticsBuilder;
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
       case r'paint':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

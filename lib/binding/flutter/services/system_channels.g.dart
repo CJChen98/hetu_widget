@@ -18,6 +18,8 @@ class SystemChannelsAutoBinding extends HTExternalClass {
         return SystemChannels.platform;
       case r'SystemChannels.textInput':
         return SystemChannels.textInput;
+      case r'SystemChannels.spellCheck':
+        return SystemChannels.spellCheck;
       case r'SystemChannels.keyEvent':
         return SystemChannels.keyEvent;
       case r'SystemChannels.lifecycle':

@@ -7,6 +7,7 @@ import 'dart:async';
 import 'dart:collection'as collection;
 import 'dart:convert';
 import 'dart:developer'as developer;
+import 'dart:ffi';
 import 'dart:io';
 import 'dart:isolate';
 import 'dart:math'as math;
@@ -1428,6 +1429,38 @@ extension ImageFilterBinding on ImageFilter {
 
 }
 
+class ShaderAutoBinding extends HTExternalClass {
+  ShaderAutoBinding() : super(r'Shader');
+
+
+  @override
+  dynamic instanceMemberGet(dynamic object, String varName) {
+    return (object as Shader).htFetch(varName);
+  }
+
+
+
+}
+
+extension ShaderBinding on Shader {
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case r'typeid':
+        return const HTExternalType(r'Shader');
+      case r'debugDisposed':
+        return debugDisposed;
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+
+}
+
 class ImageShaderAutoBinding extends HTExternalClass {
   ImageShaderAutoBinding() : super(r'ImageShader');
 
@@ -1444,18 +1477,49 @@ class ImageShaderAutoBinding extends HTExternalClass {
     }
   }
 
+  @override
+  dynamic instanceMemberGet(dynamic object, String varName) {
+    return (object as ImageShader).htFetch(varName);
+  }
 
 
 
 }
 
 extension ImageShaderBinding on ImageShader {
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case r'typeid':
+        return const HTExternalType(r'ImageShader');
+      case r'debugDisposed':
+        return debugDisposed;
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
 
 }
 
 class FragmentProgramAutoBinding extends HTExternalClass {
   FragmentProgramAutoBinding() : super(r'FragmentProgram');
 
+  @override
+  dynamic memberGet(String varName, {String? from}) {
+    switch (varName) {
+      case r'FragmentProgram.fromAsset':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => FragmentProgram.fromAsset(positionalArgs[0]);
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
 
   @override
   dynamic instanceMemberGet(dynamic object, String varName) {
@@ -1471,11 +1535,58 @@ extension FragmentProgramBinding on FragmentProgram {
     switch (varName) {
       case r'typeid':
         return const HTExternalType(r'FragmentProgram');
+      case r'fragmentShader':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.fragmentShader();
       case r'shader':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.shader(floatUniforms : namedArgs['floatUniforms'], samplerUniforms : List<ImageShader>.from(namedArgs['samplerUniforms']));
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+
+}
+
+class FragmentShaderAutoBinding extends HTExternalClass {
+  FragmentShaderAutoBinding() : super(r'FragmentShader');
+
+
+  @override
+  dynamic instanceMemberGet(dynamic object, String varName) {
+    return (object as FragmentShader).htFetch(varName);
+  }
+
+
+
+}
+
+extension FragmentShaderBinding on FragmentShader {
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case r'typeid':
+        return const HTExternalType(r'FragmentShader');
+      case r'debugDisposed':
+        return debugDisposed;
+      case r'setFloat':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.setFloat(positionalArgs[0], positionalArgs[1]);
+      case r'setSampler':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.setSampler(positionalArgs[0], positionalArgs[1]);
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
       default:
         throw HTError.undefined(varName);
     }
@@ -1504,12 +1615,31 @@ class VerticesAutoBinding extends HTExternalClass {
     }
   }
 
+  @override
+  dynamic instanceMemberGet(dynamic object, String varName) {
+    return (object as Vertices).htFetch(varName);
+  }
 
 
 
 }
 
 extension VerticesBinding on Vertices {
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case r'typeid':
+        return const HTExternalType(r'Vertices');
+      case r'debugDisposed':
+        return debugDisposed;
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
 
 }
 
@@ -1558,6 +1688,11 @@ extension CanvasBinding on Canvas {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.restore();
+      case r'restoreToCount':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.restoreToCount(positionalArgs[0]);
       case r'getSaveCount':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -1733,6 +1868,28 @@ extension CanvasBinding on Canvas {
 class PictureAutoBinding extends HTExternalClass {
   PictureAutoBinding() : super(r'Picture');
 
+  @override
+  dynamic memberGet(String varName, {String? from}) {
+    switch (varName) {
+      case r'Picture.onCreate':
+        return Picture.onCreate;
+      case r'Picture.onDispose':
+        return Picture.onDispose;
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+  @override
+  void memberSet(String varName, dynamic value, {String? from}) {
+    switch (varName) {
+      case r'Picture.onCreate':
+        return Picture.onCreate = value;
+      case r'Picture.onDispose':
+        return Picture.onDispose = value;
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
 
   @override
   dynamic instanceMemberGet(dynamic object, String varName) {
@@ -1757,6 +1914,11 @@ extension PictureBinding on Picture {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.toImage(positionalArgs[0], positionalArgs[1]);
+      case r'toImageSync':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.toImageSync(positionalArgs[0], positionalArgs[1]);
       case r'dispose':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

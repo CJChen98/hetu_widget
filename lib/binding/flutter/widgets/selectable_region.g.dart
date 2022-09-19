@@ -9,6 +9,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
+import 'package:vector_math/vector_math_64.dart';
 
 
 class SelectableRegionAutoBinding extends HTExternalClass {
@@ -21,7 +22,7 @@ class SelectableRegionAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => SelectableRegion(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, focusNode : namedArgs['focusNode'], selectionControls : namedArgs['selectionControls'], child : namedArgs['child']);
+              List<HTType> typeArgs = const []}) => SelectableRegion(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, focusNode : namedArgs['focusNode'], selectionControls : namedArgs['selectionControls'], child : namedArgs['child'], magnifierConfiguration : namedArgs.containsKey('magnifierConfiguration') ? namedArgs['magnifierConfiguration'] : TextMagnifierConfiguration.disabled, onSelectionChanged : namedArgs.containsKey('onSelectionChanged') ? namedArgs['onSelectionChanged'] : null);
       default:
         throw HTError.undefined(varName);
     }
@@ -41,12 +42,16 @@ extension SelectableRegionBinding on SelectableRegion {
     switch (varName) {
       case r'typeid':
         return const HTExternalType(r'SelectableRegion');
+      case r'magnifierConfiguration':
+        return magnifierConfiguration;
       case r'focusNode':
         return focusNode;
       case r'child':
         return child;
       case r'selectionControls':
         return selectionControls;
+      case r'onSelectionChanged':
+        return onSelectionChanged;
       case r'createState':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

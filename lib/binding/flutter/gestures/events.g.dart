@@ -1179,6 +1179,111 @@ extension PointerScrollEventBinding on PointerScrollEvent {
 
 }
 
+class PointerScrollInertiaCancelEventAutoBinding extends HTExternalClass {
+  PointerScrollInertiaCancelEventAutoBinding() : super(r'PointerScrollInertiaCancelEvent');
+
+  @override
+  dynamic memberGet(String varName, {String? from}) {
+    switch (varName) {
+      case r'PointerScrollInertiaCancelEvent':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => PointerScrollInertiaCancelEvent(timeStamp : namedArgs.containsKey('timeStamp') ? namedArgs['timeStamp'] : Duration.zero, kind : namedArgs.containsKey('kind') ? namedArgs['kind'] : PointerDeviceKind.mouse, device : namedArgs.containsKey('device') ? namedArgs['device'] : 0, position : namedArgs.containsKey('position') ? namedArgs['position'] : Offset.zero, embedderId : namedArgs.containsKey('embedderId') ? namedArgs['embedderId'] : 0);
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+
+  @override
+  dynamic instanceMemberGet(dynamic object, String varName) {
+    return (object as PointerScrollInertiaCancelEvent).htFetch(varName);
+  }
+
+
+
+}
+
+extension PointerScrollInertiaCancelEventBinding on PointerScrollInertiaCancelEvent {
+  dynamic htFetch(String varName) {
+    switch (varName) {
+      case r'typeid':
+        return const HTExternalType(r'PointerScrollInertiaCancelEvent');
+      case r'embedderId':
+        return embedderId;
+      case r'timeStamp':
+        return timeStamp;
+      case r'pointer':
+        return pointer;
+      case r'kind':
+        return kind;
+      case r'device':
+        return device;
+      case r'position':
+        return position;
+      case r'delta':
+        return delta;
+      case r'buttons':
+        return buttons;
+      case r'down':
+        return down;
+      case r'obscured':
+        return obscured;
+      case r'pressure':
+        return pressure;
+      case r'pressureMin':
+        return pressureMin;
+      case r'pressureMax':
+        return pressureMax;
+      case r'distance':
+        return distance;
+      case r'distanceMax':
+        return distanceMax;
+      case r'size':
+        return size;
+      case r'radiusMajor':
+        return radiusMajor;
+      case r'radiusMinor':
+        return radiusMinor;
+      case r'radiusMin':
+        return radiusMin;
+      case r'radiusMax':
+        return radiusMax;
+      case r'orientation':
+        return orientation;
+      case r'tilt':
+        return tilt;
+      case r'platformData':
+        return platformData;
+      case r'synthesized':
+        return synthesized;
+      case r'transform':
+        return transform;
+      case r'original':
+        return original;
+      case r'localPosition':
+        return localPosition;
+      case r'localDelta':
+        return localDelta;
+      case r'distanceMin':
+        return distanceMin;
+      case r'transformed':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.transformed(positionalArgs[0]);
+      case r'copyWith':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.copyWith(timeStamp : namedArgs['timeStamp'], pointer : namedArgs['pointer'], kind : namedArgs['kind'], device : namedArgs['device'], position : namedArgs['position'], delta : namedArgs['delta'], buttons : namedArgs['buttons'], obscured : namedArgs['obscured'], pressure : namedArgs['pressure'], pressureMin : namedArgs['pressureMin'], pressureMax : namedArgs['pressureMax'], distance : namedArgs['distance'], distanceMax : namedArgs['distanceMax'], size : namedArgs['size'], radiusMajor : namedArgs['radiusMajor'], radiusMinor : namedArgs['radiusMinor'], radiusMin : namedArgs['radiusMin'], radiusMax : namedArgs['radiusMax'], orientation : namedArgs['orientation'], tilt : namedArgs['tilt'], synthesized : namedArgs['synthesized'], embedderId : namedArgs['embedderId']);
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+
+}
+
 class PointerPanZoomStartEventAutoBinding extends HTExternalClass {
   PointerPanZoomStartEventAutoBinding() : super(r'PointerPanZoomStartEvent');
 

@@ -100,6 +100,8 @@ extension CupertinoScrollbarBinding on CupertinoScrollbar {
         return mainAxisMargin;
       case r'crossAxisMargin':
         return crossAxisMargin;
+      case r'padding':
+        return padding;
       case r'createState':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

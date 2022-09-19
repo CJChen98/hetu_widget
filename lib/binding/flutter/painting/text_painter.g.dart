@@ -123,6 +123,8 @@ extension PlaceholderDimensionsBinding on PlaceholderDimensions {
         return baselineOffset;
       case r'baseline':
         return baseline;
+      case r'hashCode':
+        return hashCode;
       case r'toString':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -146,6 +148,16 @@ class TextPainterAutoBinding extends HTExternalClass {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => TextPainter(text : namedArgs.containsKey('text') ? namedArgs['text'] : null, textAlign : namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : TextAlign.start, textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null, textScaleFactor : namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : 1.0, maxLines : namedArgs.containsKey('maxLines') ? namedArgs['maxLines'] : null, ellipsis : namedArgs.containsKey('ellipsis') ? namedArgs['ellipsis'] : null, locale : namedArgs.containsKey('locale') ? namedArgs['locale'] : null, strutStyle : namedArgs.containsKey('strutStyle') ? namedArgs['strutStyle'] : null, textWidthBasis : namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : TextWidthBasis.parent, textHeightBehavior : namedArgs.containsKey('textHeightBehavior') ? namedArgs['textHeightBehavior'] : null);
+      case r'TextPainter.computeWidth':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => TextPainter.computeWidth(text : namedArgs['text'], textDirection : namedArgs['textDirection'], textAlign : namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : TextAlign.start, textScaleFactor : namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : 1.0, maxLines : namedArgs['maxLines'], ellipsis : namedArgs['ellipsis'], locale : namedArgs['locale'], strutStyle : namedArgs['strutStyle'], textWidthBasis : namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : TextWidthBasis.parent, textHeightBehavior : namedArgs['textHeightBehavior'], minWidth : namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : 0.0, maxWidth : namedArgs.containsKey('maxWidth') ? namedArgs['maxWidth'] : double.infinity);
+      case r'TextPainter.computeMaxIntrinsicWidth':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => TextPainter.computeMaxIntrinsicWidth(text : namedArgs['text'], textDirection : namedArgs['textDirection'], textAlign : namedArgs.containsKey('textAlign') ? namedArgs['textAlign'] : TextAlign.start, textScaleFactor : namedArgs.containsKey('textScaleFactor') ? namedArgs['textScaleFactor'] : 1.0, maxLines : namedArgs['maxLines'], ellipsis : namedArgs['ellipsis'], locale : namedArgs['locale'], strutStyle : namedArgs['strutStyle'], textWidthBasis : namedArgs.containsKey('textWidthBasis') ? namedArgs['textWidthBasis'] : TextWidthBasis.parent, textHeightBehavior : namedArgs['textHeightBehavior'], minWidth : namedArgs.containsKey('minWidth') ? namedArgs['minWidth'] : 0.0, maxWidth : namedArgs.containsKey('maxWidth') ? namedArgs['maxWidth'] : double.infinity);
       default:
         throw HTError.undefined(varName);
     }
@@ -207,6 +219,8 @@ extension TextPainterBinding on TextPainter {
         return size;
       case r'didExceedMaxLines':
         return didExceedMaxLines;
+      case r'debugDisposed':
+        return debugDisposed;
       case r'markNeedsLayout':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -277,6 +291,11 @@ extension TextPainterBinding on TextPainter {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.computeLineMetrics();
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
       default:
         throw HTError.undefined(varName);
     }

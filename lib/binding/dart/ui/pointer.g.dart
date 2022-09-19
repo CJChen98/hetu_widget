@@ -7,6 +7,7 @@ import 'dart:async';
 import 'dart:collection'as collection;
 import 'dart:convert';
 import 'dart:developer'as developer;
+import 'dart:ffi';
 import 'dart:io';
 import 'dart:isolate';
 import 'dart:math'as math;
@@ -119,6 +120,8 @@ class PointerSignalKindAutoBinding extends HTExternalClass {
         return PointerSignalKind.none;
       case r'PointerSignalKind.scroll':
         return PointerSignalKind.scroll;
+      case r'PointerSignalKind.scrollInertiaCancel':
+        return PointerSignalKind.scrollInertiaCancel;
       case r'PointerSignalKind.unknown':
         return PointerSignalKind.unknown;
       default:

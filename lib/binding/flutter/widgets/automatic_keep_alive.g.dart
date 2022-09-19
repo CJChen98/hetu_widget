@@ -137,11 +137,11 @@ extension KeepAliveHandleBinding on KeepAliveHandle {
     switch (varName) {
       case r'typeid':
         return const HTExternalType(r'KeepAliveHandle');
-      case r'release':
+      case r'dispose':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.release();
+              List<HTType> typeArgs = const []}) => this.dispose();
       case r'addListener':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -152,11 +152,6 @@ extension KeepAliveHandleBinding on KeepAliveHandle {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.removeListener(positionalArgs[0]);
-      case r'dispose':
-        return (HTEntity entity,
-            {List<dynamic> positionalArgs = const [],
-              Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.dispose();
       default:
         throw HTError.undefined(varName);
     }

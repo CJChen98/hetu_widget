@@ -53,7 +53,7 @@ class BorderSideAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => BorderSide(color : namedArgs.containsKey('color') ? namedArgs['color'] : const Color(0xFF000000), width : namedArgs.containsKey('width') ? namedArgs['width'] : 1.0, style : namedArgs.containsKey('style') ? namedArgs['style'] : BorderStyle.solid, strokeAlign : namedArgs.containsKey('strokeAlign') ? namedArgs['strokeAlign'] :BorderSide.strokeAlignInside);
+              List<HTType> typeArgs = const []}) => BorderSide(color : namedArgs.containsKey('color') ? namedArgs['color'] : const Color(0xFF000000), width : namedArgs.containsKey('width') ? namedArgs['width'] : 1.0, style : namedArgs.containsKey('style') ? namedArgs['style'] : BorderStyle.solid, strokeAlign : namedArgs.containsKey('strokeAlign') ? namedArgs['strokeAlign'] : strokeAlignInside);
       case r'BorderSide.merge':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -71,6 +71,12 @@ class BorderSideAutoBinding extends HTExternalClass {
               List<HTType> typeArgs = const []}) => BorderSide.lerp(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
       case r'BorderSide.none':
         return BorderSide.none;
+      case r'BorderSide.strokeAlignInside':
+        return BorderSide.strokeAlignInside;
+      case r'BorderSide.strokeAlignCenter':
+        return BorderSide.strokeAlignCenter;
+      case r'BorderSide.strokeAlignOutside':
+        return BorderSide.strokeAlignOutside;
       default:
         throw HTError.undefined(varName);
     }
@@ -83,6 +89,7 @@ class BorderSideAutoBinding extends HTExternalClass {
 
 
 
+  static const strokeAlignInside = -1.0;
 }
 
 extension BorderSideBinding on BorderSide {
@@ -98,13 +105,19 @@ extension BorderSideBinding on BorderSide {
         return style;
       case r'strokeAlign':
         return strokeAlign;
+      case r'strokeInset':
+        return strokeInset;
+      case r'strokeOutset':
+        return strokeOutset;
+      case r'strokeOffset':
+        return strokeOffset;
       case r'hashCode':
         return hashCode;
       case r'copyWith':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.copyWith(color : namedArgs['color'], width : namedArgs['width'], style : namedArgs['style']);
+              List<HTType> typeArgs = const []}) => this.copyWith(color : namedArgs['color'], width : namedArgs['width'], style : namedArgs['style'], strokeAlign : namedArgs['strokeAlign']);
       case r'scale':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -115,11 +128,16 @@ extension BorderSideBinding on BorderSide {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.toPaint();
-      case r'toString':
+      case r'toStringShort':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.toString();
+              List<HTType> typeArgs = const []}) => this.toStringShort();
+      case r'debugFillProperties':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
       default:
         throw HTError.undefined(varName);
     }
@@ -159,6 +177,8 @@ extension ShapeBorderBinding on ShapeBorder {
         return const HTExternalType(r'ShapeBorder');
       case r'dimensions':
         return dimensions;
+      case r'preferPaintInterior':
+        return preferPaintInterior;
       case r'scale':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -174,6 +194,11 @@ extension ShapeBorderBinding on ShapeBorder {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.getInnerPath(positionalArgs[0], textDirection : namedArgs['textDirection']);
+      case r'paintInterior':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.paintInterior(positionalArgs[0], positionalArgs[1], positionalArgs[2], textDirection : namedArgs['textDirection']);
       case r'paint':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -225,6 +250,8 @@ extension OutlinedBorderBinding on OutlinedBorder {
         return side;
       case r'dimensions':
         return dimensions;
+      case r'preferPaintInterior':
+        return preferPaintInterior;
       case r'copyWith':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -255,6 +282,11 @@ extension OutlinedBorderBinding on OutlinedBorder {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.getInnerPath(positionalArgs[0], textDirection : namedArgs['textDirection']);
+      case r'paintInterior':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.paintInterior(positionalArgs[0], positionalArgs[1], positionalArgs[2], textDirection : namedArgs['textDirection']);
       case r'paint':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

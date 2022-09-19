@@ -1,8 +1,15 @@
-import 'package:flutter/widgets.dart';
-import 'package:hetu_script/binding.dart';
 import 'package:hetu_script/hetu_script.dart';
+import 'package:hetu_script/binding.dart';
 import 'package:hetu_script/types.dart';
 import 'package:hetu_script/values.dart';
+import 'package:flutter/widgets.dart';
+import 'dart:async';
+import 'dart:ui'as ui;
+import 'package:flutter/foundation.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
+
 
 class LocalHistoryEntryAutoBinding extends HTExternalClass {
   LocalHistoryEntryAutoBinding() : super(r'LocalHistoryEntry');
@@ -12,17 +19,9 @@ class LocalHistoryEntryAutoBinding extends HTExternalClass {
     switch (varName) {
       case r'LocalHistoryEntry':
         return (HTEntity entity,
-                {List<dynamic> positionalArgs = const [],
-                Map<String, dynamic> namedArgs = const {},
-                List<HTType> typeArgs = const []}) =>
-            LocalHistoryEntry(
-                onRemove: namedArgs.containsKey('onRemove')
-                    ? namedArgs['onRemove']
-                    : null,
-                impliesAppBarDismissal:
-                    namedArgs.containsKey('impliesAppBarDismissal')
-                        ? namedArgs['impliesAppBarDismissal']
-                        : true);
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => LocalHistoryEntry(onRemove : namedArgs.containsKey('onRemove') ? namedArgs['onRemove'] : null, impliesAppBarDismissal : namedArgs.containsKey('impliesAppBarDismissal') ? namedArgs['impliesAppBarDismissal'] : true);
       default:
         throw HTError.undefined(varName);
     }
@@ -33,12 +32,13 @@ class LocalHistoryEntryAutoBinding extends HTExternalClass {
     return (object as LocalHistoryEntry).htFetch(varName);
   }
 
+
   static Map<String, HTExternalFunctionTypedef> functionWrapper() {
     return <String, HTExternalFunctionTypedef>{
-      r'VoidCallback': (HTFunction function) =>
-          () => function.call(positionalArgs: const [], namedArgs: const {}),
+      r'VoidCallback': (HTFunction function) => () => function.call(positionalArgs: const [], namedArgs: const {}),
     };
   }
+
 }
 
 extension LocalHistoryEntryBinding on LocalHistoryEntry {
@@ -52,23 +52,27 @@ extension LocalHistoryEntryBinding on LocalHistoryEntry {
         return impliesAppBarDismissal;
       case r'remove':
         return (HTEntity entity,
-                {List<dynamic> positionalArgs = const [],
-                Map<String, dynamic> namedArgs = const {},
-                List<HTType> typeArgs = const []}) =>
-            this.remove();
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.remove();
       default:
         throw HTError.undefined(varName);
     }
   }
+
 }
 
 class RouteAwareAutoBinding extends HTExternalClass {
   RouteAwareAutoBinding() : super(r'RouteAware');
 
+
   @override
   dynamic instanceMemberGet(dynamic object, String varName) {
     return (object as RouteAware).htFetch(varName);
   }
+
+
+
 }
 
 extension RouteAwareBinding on RouteAware {
@@ -78,30 +82,28 @@ extension RouteAwareBinding on RouteAware {
         return const HTExternalType(r'RouteAware');
       case r'didPopNext':
         return (HTEntity entity,
-                {List<dynamic> positionalArgs = const [],
-                Map<String, dynamic> namedArgs = const {},
-                List<HTType> typeArgs = const []}) =>
-            this.didPopNext();
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.didPopNext();
       case r'didPush':
         return (HTEntity entity,
-                {List<dynamic> positionalArgs = const [],
-                Map<String, dynamic> namedArgs = const {},
-                List<HTType> typeArgs = const []}) =>
-            this.didPush();
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.didPush();
       case r'didPop':
         return (HTEntity entity,
-                {List<dynamic> positionalArgs = const [],
-                Map<String, dynamic> namedArgs = const {},
-                List<HTType> typeArgs = const []}) =>
-            this.didPop();
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.didPop();
       case r'didPushNext':
         return (HTEntity entity,
-                {List<dynamic> positionalArgs = const [],
-                Map<String, dynamic> namedArgs = const {},
-                List<HTType> typeArgs = const []}) =>
-            this.didPushNext();
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.didPushNext();
       default:
         throw HTError.undefined(varName);
     }
   }
+
 }
+

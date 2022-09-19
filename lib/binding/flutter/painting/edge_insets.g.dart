@@ -261,6 +261,11 @@ class EdgeInsetsDirectionalAutoBinding extends HTExternalClass {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => EdgeInsetsDirectional.only(start : namedArgs.containsKey('start') ? namedArgs['start'] : 0.0, top : namedArgs.containsKey('top') ? namedArgs['top'] : 0.0, end : namedArgs.containsKey('end') ? namedArgs['end'] : 0.0, bottom : namedArgs.containsKey('bottom') ? namedArgs['bottom'] : 0.0);
+      case r'EdgeInsetsDirectional.symmetric':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => EdgeInsetsDirectional.symmetric(horizontal : namedArgs.containsKey('horizontal') ? namedArgs['horizontal'] : 0.0, vertical : namedArgs.containsKey('vertical') ? namedArgs['vertical'] : 0.0);
       case r'EdgeInsetsDirectional.all':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

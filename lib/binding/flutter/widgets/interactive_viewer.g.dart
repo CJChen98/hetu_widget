@@ -9,6 +9,45 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/physics.dart';
 import 'package:vector_math/vector_math_64.dart';
 
+class PanAxisAutoBinding extends HTExternalClass {
+  PanAxisAutoBinding() : super(r'PanAxis');
+
+  @override
+  dynamic memberGet(String varName, {String? from}) {
+    switch (varName) {
+      case r'values':
+        return PanAxis.values;
+      case r'PanAxis.horizontal':
+        return PanAxis.horizontal;
+      case r'PanAxis.vertical':
+        return PanAxis.vertical;
+      case r'PanAxis.aligned':
+        return PanAxis.aligned;
+      case r'PanAxis.free':
+        return PanAxis.free;
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+
+
+  @override
+  dynamic instanceMemberGet(dynamic object, String varName) {
+    switch (varName) {
+      case r'typeid':
+        return const HTExternalType(r'PanAxis');
+      case r'index':
+        return (object as PanAxis).index;
+      case r'toString':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => (object as PanAxis).toString();
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+}
 
 class InteractiveViewerAutoBinding extends HTExternalClass {
   InteractiveViewerAutoBinding() : super(r'InteractiveViewer');
@@ -20,12 +59,12 @@ class InteractiveViewerAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => InteractiveViewer(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge, alignPanAxis : namedArgs.containsKey('alignPanAxis') ? namedArgs['alignPanAxis'] : false, boundaryMargin : namedArgs.containsKey('boundaryMargin') ? namedArgs['boundaryMargin'] : EdgeInsets.zero, constrained : namedArgs.containsKey('constrained') ? namedArgs['constrained'] : true, maxScale : namedArgs.containsKey('maxScale') ? namedArgs['maxScale'] : 2.5, minScale : namedArgs.containsKey('minScale') ? namedArgs['minScale'] : 0.8, onInteractionEnd : namedArgs.containsKey('onInteractionEnd') ? namedArgs['onInteractionEnd'] : null, onInteractionStart : namedArgs.containsKey('onInteractionStart') ? namedArgs['onInteractionStart'] : null, onInteractionUpdate : namedArgs.containsKey('onInteractionUpdate') ? namedArgs['onInteractionUpdate'] : null, panEnabled : namedArgs.containsKey('panEnabled') ? namedArgs['panEnabled'] : true, scaleEnabled : namedArgs.containsKey('scaleEnabled') ? namedArgs['scaleEnabled'] : true, scaleFactor : namedArgs.containsKey('scaleFactor') ? namedArgs['scaleFactor'] : 200.0, transformationController : namedArgs.containsKey('transformationController') ? namedArgs['transformationController'] : null, child : namedArgs['child']);
+              List<HTType> typeArgs = const []}) => InteractiveViewer(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge, alignPanAxis : namedArgs.containsKey('alignPanAxis') ? namedArgs['alignPanAxis'] : false, panAxis : namedArgs.containsKey('panAxis') ? namedArgs['panAxis'] : PanAxis.free, boundaryMargin : namedArgs.containsKey('boundaryMargin') ? namedArgs['boundaryMargin'] : EdgeInsets.zero, constrained : namedArgs.containsKey('constrained') ? namedArgs['constrained'] : true, maxScale : namedArgs.containsKey('maxScale') ? namedArgs['maxScale'] : 2.5, minScale : namedArgs.containsKey('minScale') ? namedArgs['minScale'] : 0.8, onInteractionEnd : namedArgs.containsKey('onInteractionEnd') ? namedArgs['onInteractionEnd'] : null, onInteractionStart : namedArgs.containsKey('onInteractionStart') ? namedArgs['onInteractionStart'] : null, onInteractionUpdate : namedArgs.containsKey('onInteractionUpdate') ? namedArgs['onInteractionUpdate'] : null, panEnabled : namedArgs.containsKey('panEnabled') ? namedArgs['panEnabled'] : true, scaleEnabled : namedArgs.containsKey('scaleEnabled') ? namedArgs['scaleEnabled'] : true, scaleFactor : namedArgs.containsKey('scaleFactor') ? namedArgs['scaleFactor'] : 200.0, transformationController : namedArgs.containsKey('transformationController') ? namedArgs['transformationController'] : null, child : namedArgs['child']);
       case r'InteractiveViewer.builder':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => InteractiveViewer.builder(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge, alignPanAxis : namedArgs.containsKey('alignPanAxis') ? namedArgs['alignPanAxis'] : false, boundaryMargin : namedArgs.containsKey('boundaryMargin') ? namedArgs['boundaryMargin'] : EdgeInsets.zero, maxScale : namedArgs.containsKey('maxScale') ? namedArgs['maxScale'] : 2.5, minScale : namedArgs.containsKey('minScale') ? namedArgs['minScale'] : 0.8, onInteractionEnd : namedArgs.containsKey('onInteractionEnd') ? namedArgs['onInteractionEnd'] : null, onInteractionStart : namedArgs.containsKey('onInteractionStart') ? namedArgs['onInteractionStart'] : null, onInteractionUpdate : namedArgs.containsKey('onInteractionUpdate') ? namedArgs['onInteractionUpdate'] : null, panEnabled : namedArgs.containsKey('panEnabled') ? namedArgs['panEnabled'] : true, scaleEnabled : namedArgs.containsKey('scaleEnabled') ? namedArgs['scaleEnabled'] : true, scaleFactor : namedArgs.containsKey('scaleFactor') ? namedArgs['scaleFactor'] : 200.0, transformationController : namedArgs.containsKey('transformationController') ? namedArgs['transformationController'] : null, builder : namedArgs['builder']);
+              List<HTType> typeArgs = const []}) => InteractiveViewer.builder(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge, alignPanAxis : namedArgs.containsKey('alignPanAxis') ? namedArgs['alignPanAxis'] : false, panAxis : namedArgs.containsKey('panAxis') ? namedArgs['panAxis'] : PanAxis.free, boundaryMargin : namedArgs.containsKey('boundaryMargin') ? namedArgs['boundaryMargin'] : EdgeInsets.zero, maxScale : namedArgs.containsKey('maxScale') ? namedArgs['maxScale'] : 2.5, minScale : namedArgs.containsKey('minScale') ? namedArgs['minScale'] : 0.8, onInteractionEnd : namedArgs.containsKey('onInteractionEnd') ? namedArgs['onInteractionEnd'] : null, onInteractionStart : namedArgs.containsKey('onInteractionStart') ? namedArgs['onInteractionStart'] : null, onInteractionUpdate : namedArgs.containsKey('onInteractionUpdate') ? namedArgs['onInteractionUpdate'] : null, panEnabled : namedArgs.containsKey('panEnabled') ? namedArgs['panEnabled'] : true, scaleEnabled : namedArgs.containsKey('scaleEnabled') ? namedArgs['scaleEnabled'] : true, scaleFactor : namedArgs.containsKey('scaleFactor') ? namedArgs['scaleFactor'] : 200.0, transformationController : namedArgs.containsKey('transformationController') ? namedArgs['transformationController'] : null, builder : namedArgs['builder']);
       default:
         throw HTError.undefined(varName);
     }
@@ -55,8 +94,8 @@ extension InteractiveViewerBinding on InteractiveViewer {
         return const HTExternalType(r'InteractiveViewer');
       case r'clipBehavior':
         return clipBehavior;
-      case r'alignPanAxis':
-        return alignPanAxis;
+      case r'panAxis':
+        return panAxis;
       case r'boundaryMargin':
         return boundaryMargin;
       case r'builder':

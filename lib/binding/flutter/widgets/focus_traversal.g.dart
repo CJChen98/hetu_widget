@@ -67,17 +67,22 @@ extension FocusTraversalPolicyBinding on FocusTraversalPolicy {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.findFirstFocus(positionalArgs[0]);
+              List<HTType> typeArgs = const []}) => this.findFirstFocus(positionalArgs[0], ignoreCurrentFocus : namedArgs.containsKey('ignoreCurrentFocus') ? namedArgs['ignoreCurrentFocus'] : false);
       case r'findLastFocus':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.findLastFocus(positionalArgs[0]);
+              List<HTType> typeArgs = const []}) => this.findLastFocus(positionalArgs[0], ignoreCurrentFocus : namedArgs.containsKey('ignoreCurrentFocus') ? namedArgs['ignoreCurrentFocus'] : false);
       case r'findFirstFocusInDirection':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.findFirstFocusInDirection(positionalArgs[0], positionalArgs[1]);
+      case r'invalidateScopeData':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.invalidateScopeData(positionalArgs[0]);
       case r'changedScope':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -144,17 +149,22 @@ extension WidgetOrderTraversalPolicyBinding on WidgetOrderTraversalPolicy {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.findFirstFocus(positionalArgs[0]);
+              List<HTType> typeArgs = const []}) => this.findFirstFocus(positionalArgs[0], ignoreCurrentFocus : namedArgs.containsKey('ignoreCurrentFocus') ? namedArgs['ignoreCurrentFocus'] : false);
       case r'findLastFocus':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.findLastFocus(positionalArgs[0]);
+              List<HTType> typeArgs = const []}) => this.findLastFocus(positionalArgs[0], ignoreCurrentFocus : namedArgs.containsKey('ignoreCurrentFocus') ? namedArgs['ignoreCurrentFocus'] : false);
       case r'findFirstFocusInDirection':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.findFirstFocusInDirection(positionalArgs[0], positionalArgs[1]);
+      case r'invalidateScopeData':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.invalidateScopeData(positionalArgs[0]);
       case r'changedScope':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -221,17 +231,22 @@ extension ReadingOrderTraversalPolicyBinding on ReadingOrderTraversalPolicy {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.findFirstFocus(positionalArgs[0]);
+              List<HTType> typeArgs = const []}) => this.findFirstFocus(positionalArgs[0], ignoreCurrentFocus : namedArgs.containsKey('ignoreCurrentFocus') ? namedArgs['ignoreCurrentFocus'] : false);
       case r'findLastFocus':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.findLastFocus(positionalArgs[0]);
+              List<HTType> typeArgs = const []}) => this.findLastFocus(positionalArgs[0], ignoreCurrentFocus : namedArgs.containsKey('ignoreCurrentFocus') ? namedArgs['ignoreCurrentFocus'] : false);
       case r'findFirstFocusInDirection':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.findFirstFocusInDirection(positionalArgs[0], positionalArgs[1]);
+      case r'invalidateScopeData':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.invalidateScopeData(positionalArgs[0]);
       case r'changedScope':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -438,17 +453,22 @@ extension OrderedTraversalPolicyBinding on OrderedTraversalPolicy {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.findFirstFocus(positionalArgs[0]);
+              List<HTType> typeArgs = const []}) => this.findFirstFocus(positionalArgs[0], ignoreCurrentFocus : namedArgs.containsKey('ignoreCurrentFocus') ? namedArgs['ignoreCurrentFocus'] : false);
       case r'findLastFocus':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.findLastFocus(positionalArgs[0]);
+              List<HTType> typeArgs = const []}) => this.findLastFocus(positionalArgs[0], ignoreCurrentFocus : namedArgs.containsKey('ignoreCurrentFocus') ? namedArgs['ignoreCurrentFocus'] : false);
       case r'findFirstFocusInDirection':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.findFirstFocusInDirection(positionalArgs[0], positionalArgs[1]);
+      case r'invalidateScopeData':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.invalidateScopeData(positionalArgs[0]);
       case r'changedScope':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -936,6 +956,11 @@ extension DirectionalFocusIntentBinding on DirectionalFocusIntent {
         return direction;
       case r'ignoreTextFields':
         return ignoreTextFields;
+      case r'debugFillProperties':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
       default:
         throw HTError.undefined(varName);
     }

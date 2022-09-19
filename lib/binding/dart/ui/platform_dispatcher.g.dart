@@ -7,6 +7,7 @@ import 'dart:async';
 import 'dart:collection'as collection;
 import 'dart:convert';
 import 'dart:developer'as developer;
+import 'dart:ffi';
 import 'dart:io';
 import 'dart:isolate';
 import 'dart:math'as math;
@@ -95,6 +96,25 @@ class AppLifecycleStateAutoBinding extends HTExternalClass {
     }
   }
 }
+
+class RootIsolateTokenAutoBinding extends HTExternalClass {
+  RootIsolateTokenAutoBinding() : super(r'RootIsolateToken');
+
+  @override
+  dynamic memberGet(String varName, {String? from}) {
+    switch (varName) {
+      case r'RootIsolateToken.instance':
+        return RootIsolateToken.instance;
+      default:
+        throw HTError.undefined(varName);
+    }
+  }
+
+
+
+
+}
+
 
 class PlatformDispatcherAutoBinding extends HTExternalClass {
   PlatformDispatcherAutoBinding() : super(r'PlatformDispatcher');
@@ -209,11 +229,26 @@ extension PlatformDispatcherBinding on PlatformDispatcher {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.sendPlatformMessage(positionalArgs[0], positionalArgs[1], positionalArgs[2]);
+      case r'sendPortPlatformMessage':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.sendPortPlatformMessage(positionalArgs[0], positionalArgs[1], positionalArgs[2], positionalArgs[3]);
+      case r'registerBackgroundIsolate':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.registerBackgroundIsolate(positionalArgs[0]);
       case r'setIsolateDebugName':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.setIsolateDebugName(positionalArgs[0]);
+      case r'requestDartPerformanceMode':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.requestDartPerformanceMode(positionalArgs[0]);
       case r'getPersistentIsolateData':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

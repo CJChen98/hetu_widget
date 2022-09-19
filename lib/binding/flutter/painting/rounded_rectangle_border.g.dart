@@ -41,10 +41,12 @@ extension RoundedRectangleBorderBinding on RoundedRectangleBorder {
         return borderRadius;
       case r'side':
         return side;
-      case r'dimensions':
-        return dimensions;
+      case r'preferPaintInterior':
+        return preferPaintInterior;
       case r'hashCode':
         return hashCode;
+      case r'dimensions':
+        return dimensions;
       case r'scale':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -75,6 +77,11 @@ extension RoundedRectangleBorderBinding on RoundedRectangleBorder {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.getOuterPath(positionalArgs[0], textDirection : namedArgs['textDirection']);
+      case r'paintInterior':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.paintInterior(positionalArgs[0], positionalArgs[1], positionalArgs[2], textDirection : namedArgs['textDirection']);
       case r'paint':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

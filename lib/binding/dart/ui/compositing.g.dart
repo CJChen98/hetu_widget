@@ -7,6 +7,7 @@ import 'dart:async';
 import 'dart:collection'as collection;
 import 'dart:convert';
 import 'dart:developer'as developer;
+import 'dart:ffi';
 import 'dart:io';
 import 'dart:isolate';
 import 'dart:math'as math;
@@ -32,6 +33,11 @@ extension SceneBinding on Scene {
     switch (varName) {
       case r'typeid':
         return const HTExternalType(r'Scene');
+      case r'toImageSync':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.toImageSync(positionalArgs[0], positionalArgs[1]);
       case r'toImage':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -459,11 +465,6 @@ extension SceneBuilderBinding on SceneBuilder {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.pushShaderMask(positionalArgs[0], positionalArgs[1], positionalArgs[2], oldLayer : namedArgs['oldLayer'], filterQuality : namedArgs.containsKey('filterQuality') ? namedArgs['filterQuality'] : FilterQuality.low);
-      case r'pushPhysicalShape':
-        return (HTEntity entity,
-            {List<dynamic> positionalArgs = const [],
-              Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.pushPhysicalShape(path : namedArgs['path'], elevation : namedArgs['elevation'], color : namedArgs['color'], shadowColor : namedArgs['shadowColor'], clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, oldLayer : namedArgs['oldLayer']);
       case r'pop':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

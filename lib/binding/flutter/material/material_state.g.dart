@@ -230,6 +230,12 @@ extension MaterialStateBorderSideBinding on MaterialStateBorderSide {
         return style;
       case r'strokeAlign':
         return strokeAlign;
+      case r'strokeInset':
+        return strokeInset;
+      case r'strokeOutset':
+        return strokeOutset;
+      case r'strokeOffset':
+        return strokeOffset;
       case r'hashCode':
         return hashCode;
       case r'resolve':
@@ -241,7 +247,7 @@ extension MaterialStateBorderSideBinding on MaterialStateBorderSide {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.copyWith(color : namedArgs['color'], width : namedArgs['width'], style : namedArgs['style']);
+              List<HTType> typeArgs = const []}) => this.copyWith(color : namedArgs['color'], width : namedArgs['width'], style : namedArgs['style'], strokeAlign : namedArgs['strokeAlign']);
       case r'scale':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -252,11 +258,16 @@ extension MaterialStateBorderSideBinding on MaterialStateBorderSide {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.toPaint();
-      case r'toString':
+      case r'toStringShort':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.toString();
+              List<HTType> typeArgs = const []}) => this.toStringShort();
+      case r'debugFillProperties':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.debugFillProperties(positionalArgs[0]);
       default:
         throw HTError.undefined(varName);
     }
@@ -286,6 +297,8 @@ extension MaterialStateOutlinedBorderBinding on MaterialStateOutlinedBorder {
         return side;
       case r'dimensions':
         return dimensions;
+      case r'preferPaintInterior':
+        return preferPaintInterior;
       case r'resolve':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -321,6 +334,11 @@ extension MaterialStateOutlinedBorderBinding on MaterialStateOutlinedBorder {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.getInnerPath(positionalArgs[0], textDirection : namedArgs['textDirection']);
+      case r'paintInterior':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.paintInterior(positionalArgs[0], positionalArgs[1], positionalArgs[2], textDirection : namedArgs['textDirection']);
       case r'paint':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -512,6 +530,8 @@ extension MaterialStateOutlineInputBorderBinding on MaterialStateOutlineInputBor
         return isOutline;
       case r'dimensions':
         return dimensions;
+      case r'preferPaintInterior':
+        return preferPaintInterior;
       case r'hashCode':
         return hashCode;
       case r'resolve':
@@ -549,6 +569,11 @@ extension MaterialStateOutlineInputBorderBinding on MaterialStateOutlineInputBor
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.getOuterPath(positionalArgs[0], textDirection : namedArgs['textDirection']);
+      case r'paintInterior':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.paintInterior(positionalArgs[0], positionalArgs[1], positionalArgs[2], textDirection : namedArgs['textDirection']);
       case r'paint':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -604,6 +629,8 @@ extension MaterialStateUnderlineInputBorderBinding on MaterialStateUnderlineInpu
         return isOutline;
       case r'dimensions':
         return dimensions;
+      case r'preferPaintInterior':
+        return preferPaintInterior;
       case r'hashCode':
         return hashCode;
       case r'resolve':
@@ -631,6 +658,11 @@ extension MaterialStateUnderlineInputBorderBinding on MaterialStateUnderlineInpu
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.getOuterPath(positionalArgs[0], textDirection : namedArgs['textDirection']);
+      case r'paintInterior':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.paintInterior(positionalArgs[0], positionalArgs[1], positionalArgs[2], textDirection : namedArgs['textDirection']);
       case r'lerpFrom':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

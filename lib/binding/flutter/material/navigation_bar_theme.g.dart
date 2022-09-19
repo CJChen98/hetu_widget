@@ -19,7 +19,7 @@ class NavigationBarThemeDataAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => NavigationBarThemeData(height : namedArgs.containsKey('height') ? namedArgs['height'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, indicatorColor : namedArgs.containsKey('indicatorColor') ? namedArgs['indicatorColor'] : null, indicatorShape : namedArgs.containsKey('indicatorShape') ? namedArgs['indicatorShape'] : null, labelTextStyle : namedArgs.containsKey('labelTextStyle') ? namedArgs['labelTextStyle'] : null, iconTheme : namedArgs.containsKey('iconTheme') ? namedArgs['iconTheme'] : null, labelBehavior : namedArgs.containsKey('labelBehavior') ? namedArgs['labelBehavior'] : null);
+              List<HTType> typeArgs = const []}) => NavigationBarThemeData(height : namedArgs.containsKey('height') ? namedArgs['height'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, indicatorColor : namedArgs.containsKey('indicatorColor') ? namedArgs['indicatorColor'] : null, indicatorShape : namedArgs.containsKey('indicatorShape') ? namedArgs['indicatorShape'] : null, labelTextStyle : namedArgs.containsKey('labelTextStyle') ? namedArgs['labelTextStyle'] : null, iconTheme : namedArgs.containsKey('iconTheme') ? namedArgs['iconTheme'] : null, labelBehavior : namedArgs.containsKey('labelBehavior') ? namedArgs['labelBehavior'] : null);
       case r'NavigationBarThemeData.lerp':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -48,10 +48,12 @@ extension NavigationBarThemeDataBinding on NavigationBarThemeData {
         return height;
       case r'backgroundColor':
         return backgroundColor;
-      case r'surfaceTintColor':
-        return surfaceTintColor;
       case r'elevation':
         return elevation;
+      case r'shadowColor':
+        return shadowColor;
+      case r'surfaceTintColor':
+        return surfaceTintColor;
       case r'indicatorColor':
         return indicatorColor;
       case r'indicatorShape':
@@ -68,7 +70,7 @@ extension NavigationBarThemeDataBinding on NavigationBarThemeData {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.copyWith(height : namedArgs['height'], backgroundColor : namedArgs['backgroundColor'], surfaceTintColor : namedArgs['surfaceTintColor'], elevation : namedArgs['elevation'], indicatorColor : namedArgs['indicatorColor'], indicatorShape : namedArgs['indicatorShape'], labelTextStyle : namedArgs['labelTextStyle'], iconTheme : namedArgs['iconTheme'], labelBehavior : namedArgs['labelBehavior']);
+              List<HTType> typeArgs = const []}) => this.copyWith(height : namedArgs['height'], backgroundColor : namedArgs['backgroundColor'], elevation : namedArgs['elevation'], shadowColor : namedArgs['shadowColor'], surfaceTintColor : namedArgs['surfaceTintColor'], indicatorColor : namedArgs['indicatorColor'], indicatorShape : namedArgs['indicatorShape'], labelTextStyle : namedArgs['labelTextStyle'], iconTheme : namedArgs['iconTheme'], labelBehavior : namedArgs['labelBehavior']);
       case r'debugFillProperties':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

@@ -2308,6 +2308,11 @@ extension RenderClipRectBinding on RenderClipRect {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.describeApproximatePaintClip(positionalArgs[0]);
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
       case r'setupParentData':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -2507,6 +2512,11 @@ extension RenderClipRRectBinding on RenderClipRRect {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.describeApproximatePaintClip(positionalArgs[0]);
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
       case r'setupParentData':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -2710,6 +2720,11 @@ extension RenderClipOvalBinding on RenderClipOval {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.describeApproximatePaintClip(positionalArgs[0]);
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
       case r'setupParentData':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -2901,6 +2916,11 @@ extension RenderClipPathBinding on RenderClipPath {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.describeApproximatePaintClip(positionalArgs[0]);
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
       case r'setupParentData':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -3116,6 +3136,11 @@ extension RenderPhysicalModelBinding on RenderPhysicalModel {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugPaintSize(positionalArgs[0], positionalArgs[1]);
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
       case r'setupParentData':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -3330,6 +3355,11 @@ extension RenderPhysicalShapeBinding on RenderPhysicalShape {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.debugPaintSize(positionalArgs[0], positionalArgs[1]);
+      case r'dispose':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.dispose();
       case r'setupParentData':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -4817,6 +4847,11 @@ extension RenderRepaintBoundaryBinding on RenderRepaintBoundary {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.toImage(pixelRatio : namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
+      case r'toImageSync':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.toImageSync(pixelRatio : namedArgs.containsKey('pixelRatio') ? namedArgs['pixelRatio'] : 1.0);
       case r'debugResetMetrics':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

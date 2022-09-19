@@ -55,7 +55,7 @@ class MaterialBannerAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => MaterialBanner(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, content : namedArgs['content'], contentTextStyle : namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null, actions : List<Widget>.from(namedArgs['actions']), elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, leading : namedArgs.containsKey('leading') ? namedArgs['leading'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, leadingPadding : namedArgs.containsKey('leadingPadding') ? namedArgs['leadingPadding'] : null, forceActionsBelow : namedArgs.containsKey('forceActionsBelow') ? namedArgs['forceActionsBelow'] : false, overflowAlignment : namedArgs.containsKey('overflowAlignment') ? namedArgs['overflowAlignment'] : OverflowBarAlignment.end, animation : namedArgs.containsKey('animation') ? namedArgs['animation'] : null, onVisible : namedArgs.containsKey('onVisible') ? namedArgs['onVisible'] : null);
+              List<HTType> typeArgs = const []}) => MaterialBanner(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, content : namedArgs['content'], contentTextStyle : namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null, actions : List<Widget>.from(namedArgs['actions']), elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, leading : namedArgs.containsKey('leading') ? namedArgs['leading'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, dividerColor : namedArgs.containsKey('dividerColor') ? namedArgs['dividerColor'] : null, padding : namedArgs.containsKey('padding') ? namedArgs['padding'] : null, leadingPadding : namedArgs.containsKey('leadingPadding') ? namedArgs['leadingPadding'] : null, forceActionsBelow : namedArgs.containsKey('forceActionsBelow') ? namedArgs['forceActionsBelow'] : false, overflowAlignment : namedArgs.containsKey('overflowAlignment') ? namedArgs['overflowAlignment'] : OverflowBarAlignment.end, animation : namedArgs.containsKey('animation') ? namedArgs['animation'] : null, onVisible : namedArgs.containsKey('onVisible') ? namedArgs['onVisible'] : null);
       case r'MaterialBanner.createAnimationController':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -97,6 +97,12 @@ extension MaterialBannerBinding on MaterialBanner {
         return leading;
       case r'backgroundColor':
         return backgroundColor;
+      case r'surfaceTintColor':
+        return surfaceTintColor;
+      case r'shadowColor':
+        return shadowColor;
+      case r'dividerColor':
+        return dividerColor;
       case r'padding':
         return padding;
       case r'leadingPadding':

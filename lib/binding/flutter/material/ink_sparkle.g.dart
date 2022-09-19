@@ -3,11 +3,8 @@ import 'package:hetu_script/binding.dart';
 import 'package:hetu_script/types.dart';
 import 'package:hetu_script/values.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
 import 'dart:math'as math;
-import 'dart:typed_data';
 import 'dart:ui'as ui;
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:vector_math/vector_math_64.dart';
 
@@ -79,3 +76,4 @@ extension InkSparkleBinding on InkSparkle {
   }
 
 }
+

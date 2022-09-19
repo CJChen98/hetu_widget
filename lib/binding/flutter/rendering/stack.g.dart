@@ -507,7 +507,7 @@ class RenderIndexedStackAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => RenderIndexedStack(children : namedArgs.containsKey('children') ? List<RenderBox>.from(namedArgs['children']) : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : AlignmentDirectional.topStart, textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null, index : namedArgs.containsKey('index') ? namedArgs['index'] : 0);
+              List<HTType> typeArgs = const []}) => RenderIndexedStack(children : namedArgs.containsKey('children') ? List<RenderBox>.from(namedArgs['children']) : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : AlignmentDirectional.topStart, textDirection : namedArgs.containsKey('textDirection') ? namedArgs['textDirection'] : null, fit : namedArgs.containsKey('fit') ? namedArgs['fit'] : StackFit.loose, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.hardEdge, index : namedArgs.containsKey('index') ? namedArgs['index'] : 0);
       default:
         throw HTError.undefined(varName);
     }

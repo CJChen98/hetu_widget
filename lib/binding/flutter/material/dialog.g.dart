@@ -19,7 +19,7 @@ class DialogAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => Dialog(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, insetAnimationDuration : namedArgs.containsKey('insetAnimationDuration') ? namedArgs['insetAnimationDuration'] : const Duration(milliseconds: 100), insetAnimationCurve : namedArgs.containsKey('insetAnimationCurve') ? namedArgs['insetAnimationCurve'] : Curves.decelerate, insetPadding : namedArgs.containsKey('insetPadding') ? namedArgs['insetPadding'] : _defaultInsetPadding, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null, child : namedArgs.containsKey('child') ? namedArgs['child'] : null);
+              List<HTType> typeArgs = const []}) => Dialog(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, insetAnimationDuration : namedArgs.containsKey('insetAnimationDuration') ? namedArgs['insetAnimationDuration'] : const Duration(milliseconds: 100), insetAnimationCurve : namedArgs.containsKey('insetAnimationCurve') ? namedArgs['insetAnimationCurve'] : Curves.decelerate, insetPadding : namedArgs.containsKey('insetPadding') ? namedArgs['insetPadding'] : _defaultInsetPadding, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null, child : namedArgs.containsKey('child') ? namedArgs['child'] : null);
       default:
         throw HTError.undefined(varName);
     }
@@ -43,6 +43,10 @@ extension DialogBinding on Dialog {
         return backgroundColor;
       case r'elevation':
         return elevation;
+      case r'shadowColor':
+        return shadowColor;
+      case r'surfaceTintColor':
+        return surfaceTintColor;
       case r'insetAnimationDuration':
         return insetAnimationDuration;
       case r'insetAnimationCurve':
@@ -79,7 +83,7 @@ class AlertDialogAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => AlertDialog(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, icon : namedArgs.containsKey('icon') ? namedArgs['icon'] : null, iconPadding : namedArgs.containsKey('iconPadding') ? namedArgs['iconPadding'] : null, iconColor : namedArgs.containsKey('iconColor') ? namedArgs['iconColor'] : null, title : namedArgs.containsKey('title') ? namedArgs['title'] : null, titlePadding : namedArgs.containsKey('titlePadding') ? namedArgs['titlePadding'] : null, titleTextStyle : namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null, content : namedArgs.containsKey('content') ? namedArgs['content'] : null, contentPadding : namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null, contentTextStyle : namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null, actions : namedArgs.containsKey('actions') ? List<Widget>.from(namedArgs['actions']) : null, actionsPadding : namedArgs.containsKey('actionsPadding') ? namedArgs['actionsPadding'] : null, actionsAlignment : namedArgs.containsKey('actionsAlignment') ? namedArgs['actionsAlignment'] : null, actionsOverflowAlignment : namedArgs.containsKey('actionsOverflowAlignment') ? namedArgs['actionsOverflowAlignment'] : null, actionsOverflowDirection : namedArgs.containsKey('actionsOverflowDirection') ? namedArgs['actionsOverflowDirection'] : null, actionsOverflowButtonSpacing : namedArgs.containsKey('actionsOverflowButtonSpacing') ? namedArgs['actionsOverflowButtonSpacing'] : null, buttonPadding : namedArgs.containsKey('buttonPadding') ? namedArgs['buttonPadding'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, semanticLabel : namedArgs.containsKey('semanticLabel') ? namedArgs['semanticLabel'] : null, insetPadding : namedArgs.containsKey('insetPadding') ? namedArgs['insetPadding'] : _defaultInsetPadding, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null, scrollable : namedArgs.containsKey('scrollable') ? namedArgs['scrollable'] : false);
+              List<HTType> typeArgs = const []}) => AlertDialog(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, icon : namedArgs.containsKey('icon') ? namedArgs['icon'] : null, iconPadding : namedArgs.containsKey('iconPadding') ? namedArgs['iconPadding'] : null, iconColor : namedArgs.containsKey('iconColor') ? namedArgs['iconColor'] : null, title : namedArgs.containsKey('title') ? namedArgs['title'] : null, titlePadding : namedArgs.containsKey('titlePadding') ? namedArgs['titlePadding'] : null, titleTextStyle : namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null, content : namedArgs.containsKey('content') ? namedArgs['content'] : null, contentPadding : namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : null, contentTextStyle : namedArgs.containsKey('contentTextStyle') ? namedArgs['contentTextStyle'] : null, actions : namedArgs.containsKey('actions') ? List<Widget>.from(namedArgs['actions']) : null, actionsPadding : namedArgs.containsKey('actionsPadding') ? namedArgs['actionsPadding'] : null, actionsAlignment : namedArgs.containsKey('actionsAlignment') ? namedArgs['actionsAlignment'] : null, actionsOverflowAlignment : namedArgs.containsKey('actionsOverflowAlignment') ? namedArgs['actionsOverflowAlignment'] : null, actionsOverflowDirection : namedArgs.containsKey('actionsOverflowDirection') ? namedArgs['actionsOverflowDirection'] : null, actionsOverflowButtonSpacing : namedArgs.containsKey('actionsOverflowButtonSpacing') ? namedArgs['actionsOverflowButtonSpacing'] : null, buttonPadding : namedArgs.containsKey('buttonPadding') ? namedArgs['buttonPadding'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, semanticLabel : namedArgs.containsKey('semanticLabel') ? namedArgs['semanticLabel'] : null, insetPadding : namedArgs.containsKey('insetPadding') ? namedArgs['insetPadding'] : _defaultInsetPadding, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null, scrollable : namedArgs.containsKey('scrollable') ? namedArgs['scrollable'] : false);
       default:
         throw HTError.undefined(varName);
     }
@@ -135,6 +139,10 @@ extension AlertDialogBinding on AlertDialog {
         return backgroundColor;
       case r'elevation':
         return elevation;
+      case r'shadowColor':
+        return shadowColor;
+      case r'surfaceTintColor':
+        return surfaceTintColor;
       case r'semanticLabel':
         return semanticLabel;
       case r'insetPadding':
@@ -222,7 +230,7 @@ class SimpleDialogAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => SimpleDialog(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, title : namedArgs.containsKey('title') ? namedArgs['title'] : null, titlePadding : namedArgs.containsKey('titlePadding') ? namedArgs['titlePadding'] : const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0), titleTextStyle : namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null, children : namedArgs.containsKey('children') ? List<Widget>.from(namedArgs['children']) : null, contentPadding : namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : const EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 16.0), backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, semanticLabel : namedArgs.containsKey('semanticLabel') ? namedArgs['semanticLabel'] : null, insetPadding : namedArgs.containsKey('insetPadding') ? namedArgs['insetPadding'] : _defaultInsetPadding, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null);
+              List<HTType> typeArgs = const []}) => SimpleDialog(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, title : namedArgs.containsKey('title') ? namedArgs['title'] : null, titlePadding : namedArgs.containsKey('titlePadding') ? namedArgs['titlePadding'] : const EdgeInsets.fromLTRB(24.0, 24.0, 24.0, 0.0), titleTextStyle : namedArgs.containsKey('titleTextStyle') ? namedArgs['titleTextStyle'] : null, children : namedArgs.containsKey('children') ? List<Widget>.from(namedArgs['children']) : null, contentPadding : namedArgs.containsKey('contentPadding') ? namedArgs['contentPadding'] : const EdgeInsets.fromLTRB(0.0, 12.0, 0.0, 16.0), backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, semanticLabel : namedArgs.containsKey('semanticLabel') ? namedArgs['semanticLabel'] : null, insetPadding : namedArgs.containsKey('insetPadding') ? namedArgs['insetPadding'] : _defaultInsetPadding, clipBehavior : namedArgs.containsKey('clipBehavior') ? namedArgs['clipBehavior'] : Clip.none, shape : namedArgs.containsKey('shape') ? namedArgs['shape'] : null, alignment : namedArgs.containsKey('alignment') ? namedArgs['alignment'] : null);
       default:
         throw HTError.undefined(varName);
     }
@@ -256,6 +264,10 @@ extension SimpleDialogBinding on SimpleDialog {
         return backgroundColor;
       case r'elevation':
         return elevation;
+      case r'shadowColor':
+        return shadowColor;
+      case r'surfaceTintColor':
+        return surfaceTintColor;
       case r'semanticLabel':
         return semanticLabel;
       case r'insetPadding':

@@ -3,7 +3,7 @@ import 'package:hetu_script/binding.dart';
 import 'package:hetu_script/types.dart';
 import 'package:hetu_script/values.dart';
 import 'package:flutter/painting.dart';
-import 'dart:math'as math;
+import 'dart:ui'as ui;
 import 'package:flutter/foundation.dart';
 
 
@@ -17,7 +17,7 @@ class CircleBorderAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => CircleBorder(side : namedArgs.containsKey('side') ? namedArgs['side'] : BorderSide.none);
+              List<HTType> typeArgs = const []}) => CircleBorder(side : namedArgs.containsKey('side') ? namedArgs['side'] : BorderSide.none, eccentricity : namedArgs.containsKey('eccentricity') ? namedArgs['eccentricity'] : 0.0);
       default:
         throw HTError.undefined(varName);
     }
@@ -37,12 +37,16 @@ extension CircleBorderBinding on CircleBorder {
     switch (varName) {
       case r'typeid':
         return const HTExternalType(r'CircleBorder');
+      case r'eccentricity':
+        return eccentricity;
       case r'side':
         return side;
-      case r'dimensions':
-        return dimensions;
+      case r'preferPaintInterior':
+        return preferPaintInterior;
       case r'hashCode':
         return hashCode;
+      case r'dimensions':
+        return dimensions;
       case r'scale':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
@@ -68,11 +72,16 @@ extension CircleBorderBinding on CircleBorder {
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
               List<HTType> typeArgs = const []}) => this.getOuterPath(positionalArgs[0], textDirection : namedArgs['textDirection']);
+      case r'paintInterior':
+        return (HTEntity entity,
+            {List<dynamic> positionalArgs = const [],
+              Map<String, dynamic> namedArgs = const {},
+              List<HTType> typeArgs = const []}) => this.paintInterior(positionalArgs[0], positionalArgs[1], positionalArgs[2], textDirection : namedArgs['textDirection']);
       case r'copyWith':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => this.copyWith(side : namedArgs['side']);
+              List<HTType> typeArgs = const []}) => this.copyWith(side : namedArgs['side'], eccentricity : namedArgs['eccentricity']);
       case r'paint':
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],

@@ -7,6 +7,7 @@ import 'dart:async';
 import 'dart:collection'as collection;
 import 'dart:convert';
 import 'dart:developer'as developer;
+import 'dart:ffi';
 import 'dart:io';
 import 'dart:isolate';
 import 'dart:math'as math;
@@ -109,6 +110,8 @@ class SemanticsFlagAutoBinding extends HTExternalClass {
         return SemanticsFlag.hasCheckedState;
       case r'SemanticsFlag.isChecked':
         return SemanticsFlag.isChecked;
+      case r'SemanticsFlag.isCheckStateMixed':
+        return SemanticsFlag.isCheckStateMixed;
       case r'SemanticsFlag.isSelected':
         return SemanticsFlag.isSelected;
       case r'SemanticsFlag.isButton':

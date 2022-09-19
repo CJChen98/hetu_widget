@@ -3,8 +3,10 @@ import 'package:hetu_script/binding.dart';
 import 'package:hetu_script/types.dart';
 import 'package:hetu_script/values.dart';
 import 'package:flutter/material.dart';
+import 'dart:ui'as ui;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/rendering.dart';
 
 
 class PageTransitionsBuilderAutoBinding extends HTExternalClass {

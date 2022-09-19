@@ -245,7 +245,7 @@ class CharacterActivatorAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => CharacterActivator(positionalArgs[0]);
+              List<HTType> typeArgs = const []}) => CharacterActivator(positionalArgs[0], control : namedArgs.containsKey('control') ? namedArgs['control'] : false, meta : namedArgs.containsKey('meta') ? namedArgs['meta'] : false, includeRepeats : namedArgs.containsKey('includeRepeats') ? namedArgs['includeRepeats'] : true);
       default:
         throw HTError.undefined(varName);
     }
@@ -265,6 +265,12 @@ extension CharacterActivatorBinding on CharacterActivator {
     switch (varName) {
       case r'typeid':
         return const HTExternalType(r'CharacterActivator');
+      case r'control':
+        return control;
+      case r'meta':
+        return meta;
+      case r'includeRepeats':
+        return includeRepeats;
       case r'character':
         return character;
       case r'triggers':

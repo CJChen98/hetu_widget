@@ -54,7 +54,7 @@ class NavigationBarAutoBinding extends HTExternalClass {
         return (HTEntity entity,
             {List<dynamic> positionalArgs = const [],
               Map<String, dynamic> namedArgs = const {},
-              List<HTType> typeArgs = const []}) => NavigationBar(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, animationDuration : namedArgs.containsKey('animationDuration') ? namedArgs['animationDuration'] : null, selectedIndex : namedArgs.containsKey('selectedIndex') ? namedArgs['selectedIndex'] : 0, destinations : List<Widget>.from(namedArgs['destinations']), onDestinationSelected : namedArgs.containsKey('onDestinationSelected') ? namedArgs['onDestinationSelected'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, height : namedArgs.containsKey('height') ? namedArgs['height'] : null, labelBehavior : namedArgs.containsKey('labelBehavior') ? namedArgs['labelBehavior'] : null);
+              List<HTType> typeArgs = const []}) => NavigationBar(key : namedArgs.containsKey('key') ? namedArgs['key'] : null, animationDuration : namedArgs.containsKey('animationDuration') ? namedArgs['animationDuration'] : null, selectedIndex : namedArgs.containsKey('selectedIndex') ? namedArgs['selectedIndex'] : 0, destinations : List<Widget>.from(namedArgs['destinations']), onDestinationSelected : namedArgs.containsKey('onDestinationSelected') ? namedArgs['onDestinationSelected'] : null, backgroundColor : namedArgs.containsKey('backgroundColor') ? namedArgs['backgroundColor'] : null, elevation : namedArgs.containsKey('elevation') ? namedArgs['elevation'] : null, shadowColor : namedArgs.containsKey('shadowColor') ? namedArgs['shadowColor'] : null, surfaceTintColor : namedArgs.containsKey('surfaceTintColor') ? namedArgs['surfaceTintColor'] : null, height : namedArgs.containsKey('height') ? namedArgs['height'] : null, labelBehavior : namedArgs.containsKey('labelBehavior') ? namedArgs['labelBehavior'] : null);
       default:
         throw HTError.undefined(varName);
     }
@@ -84,10 +84,12 @@ extension NavigationBarBinding on NavigationBar {
         return onDestinationSelected;
       case r'backgroundColor':
         return backgroundColor;
-      case r'surfaceTintColor':
-        return surfaceTintColor;
       case r'elevation':
         return elevation;
+      case r'shadowColor':
+        return shadowColor;
+      case r'surfaceTintColor':
+        return surfaceTintColor;
       case r'height':
         return height;
       case r'labelBehavior':
