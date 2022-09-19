@@ -13,7 +13,7 @@ class HetuScriptBinding extends HetuLibraryScriptBinding {
     var functionWrappers = <String, HTExternalFunctionTypedef>{};
     functionWrappers.addAll(CachedNetworkImageAutoBinding.functionWrapper());
     functionWrappers.forEach((key, value) {
-        hetu.interpreter.bindExternalFunctionType(key, value);
+      hetu.interpreter.bindExternalFunctionType(key, value);
     });
   }
 
@@ -26,7 +26,7 @@ class HetuScriptBinding extends HetuLibraryScriptBinding {
       MultiImageStreamCompleterAutoBinding(),
     ];
     for (var value in bindings) {
-        hetu.interpreter.bindExternalClass(value);
+      hetu.interpreter.bindExternalClass(value);
     }
   }
 
